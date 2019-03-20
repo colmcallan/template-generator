@@ -1,0 +1,129 @@
+body {
+  background: linear-gradient(to right, #1c242b 0%, #c600ef 99%);
+  background-size: cover;
+  max-height: none;
+  overflow: auto;
+  text-align: center;
+
+}
+
+article {
+  height: 100vh;
+  display: block;
+}
+
+
+
+
+
+
+scroll,
+.scroller {
+  margin-top: 20px;
+}
+
+
+.panel.minheight {
+  min-height: 33em;
+}
+
+.panel {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: 0 1px 2px rgba(43, 59, 93, 0.18);
+  padding: 1.75em 2.25rem;
+  border-radius: 4px;
+  padding: 5px;
+  margin: auto;
+  width: auto;
+  display: inline-block;
+}
+
+.panel li {
+  padding: 0.4em 0;
+  color: #777777 !important;
+}
+
+
+textarea {
+  background-color: #f2f2f2 !important;
+  border-color: #ccc!important;
+  border-radius: 3px!important;
+  color: #3e4356!important;
+  font-size: 1.1em!important;
+  margin-left: -1px !important;
+  text-align: left!important;
+  width: 98.6%;
+  font-weight: 400;
+  line-height: 1.1em;
+  max-width: 100%;
+  height: 200px;
+}
+
+.sliderWrapper {
+  display: inline-block;
+  margin: 0px 20px 10px 0px;
+  postion: relative;
+}
+
+.sliderWrapper div {
+  display: inline-block;
+  line-height: 60px;
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  padding: 0px;
+  width: 54px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d7d7d7;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #1fb5ad;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #1fb5ad;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
