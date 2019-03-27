@@ -39,9 +39,9 @@
 					<button id="prdctbtnUpgrd" type="button" class="btn btn-default" onclick="upgradeCall()">Upgrade</button>
 					<button id="unchkall" type="button" class="btn btn-default" onclick="uncheckAll2()">Uncheck All</button>
 
+					<!--Sky Q section and troubleshooting-->
 
-
-					<div id="skyQ1" style="display:none;">
+					<div id="skyQ1">
 						<FORM id=FormQ method=get name=FormName action=blah.php>
 							<div class="sliderWrapper">
 								<div>No Satellite Signal&nbsp;&nbsp;</div>
@@ -199,7 +199,7 @@
 
 					<!--Sky+hd notes toggle on click and generate in textarea.-->
 
-					<div id="skyHD1" style="display:none;">
+					<div id="skyHD1">
 						<FORM id=Form+HD method=get name=FormName action=blah.php>
 							<div class="sliderWrapper">
 								<div>NSS&nbsp;&nbsp;</div>
@@ -285,7 +285,7 @@
 						<br>
 						<!--SKY +HD troubleshooting steps hidden until clicked and hidden within Sky HD-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingHD()">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTHD" style="display:none;">
+						<div id="TROUBLESHOOTHD">
 
 							<div class="sliderWrapper">
 								<div>Manual Reboot&nbsp;&nbsp;</div>
@@ -364,7 +364,7 @@
 					</div>
 					<!--ADSL/FIBRE steps. feeds into text area on selection.-->
 
-					<div id="ADSL1" style="display:none;">
+					<div id="ADSL1">
 						<FORM id=FormADSL method=get name=FormName action=blah.php>
 							<!--Issues-->
 							<div class="sliderWrapper">
@@ -467,7 +467,7 @@
 
 						<!--Troubleshooting steps broadband-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingBB()">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTBB" style="display:none;">
+						<div id="TROUBLESHOOTBB">
 							<div class="sliderWrapper">
 								<div>Checked and correct the internal setup&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -589,19 +589,19 @@
 							<input type="checkbox" class="notes" value="We changed the customers device to run auto wireless IP"><span class="slider round"></span>
                             </label></div>
 							<br>
-
+							<!--resolution-->
 							<h4>Did you Resolve the issue?</h4>
 							<div class="sliderWrapper">
 								<div>Yes&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value"issue resolved over the phone no further steps required"><span class="slider round"></span>
+							<input type="checkbox" class="notes" value="issue resolved over the phone no further steps required"><span class="slider round"></span>
                             </label></div>
 							<div class="sliderWrapper">
 								<div>No&nbsp;&nbsp;</div>
 								<label class="switch">
 							<input type="checkbox" class="notes" value="No, further troubleshooting steps required with the customer"><span class="slider round"></span>
                             </label></div>
-
+							<!--Fault option-->
 							<h4>Did You Need To Log The Fault?</h4>
 							<div class="sliderWrapper">
 								<div>Yes&nbsp;&nbsp;</div>
@@ -624,7 +624,7 @@
 					</div>
 
 					<!--Fibre To The Home-->
-					<div id="FTTH1" style="display:none;">
+					<div id="FTTH1">
 						<FORM id=FormFTTH method=get name=FormName action=blah.php>
 							<!--Issues-->
 							<div class="sliderWrapper">
@@ -650,7 +650,7 @@
 
 						<!--FTTH troubleshooting steps-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingFFTH()">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTFFTH" style="display:none;">
+						<div id="TROUBLESHOOTFFTH">
 							<div class="sliderWrapper">
 								<div>Checked Lights On ONT&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -758,7 +758,7 @@
 						</div>
 
 					</div>
-					<div id="TALK1" style="display:none;">
+					<div id="TALK1">
 						<FORM id=FormTalk method=get name=FormName action=blah.php>
 							<div class="sliderWrapper">
 								<div>Three Way Calling &nbsp;&nbsp;
@@ -880,7 +880,7 @@
 						</FORM>
 						<!--Talk troubleshooting steps-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingTalk()">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTTalk" style="display:none;">
+						<div id="TROUBLESHOOTTalk">
 							<div class="sliderWrapper">
 								<div>Customers handset is compatible with call feature&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -1002,7 +1002,7 @@
 
 					</div>
 					<!--billing issues and resolution-->
-					<div id="BILLING1" style="display:none;">
+					<div id="BILLING1">
 						<FORM id=FormBilling method=get name=FormName action=blah.php>
 							<div class="sliderWrapper">
 								<div>Pay a bill&nbsp;&nbsp;</div>
@@ -1076,7 +1076,7 @@
                             </label></div>
 					</div>
 					<!--Upgrade choices-->
-					<div id="UPGRADE1" style="display:none;">
+					<div id="UPGRADE1">
 						<FORM id=FormUpgrade method=get name=FormName action=blah.php>
 							<h4>Subscription Upgrades</h4>
 							<div class="sliderWrapper">
@@ -1198,6 +1198,8 @@
 				<!--<textarea id="selectedtext" placeholder="Selected Checkbox" style="display;none;"></textarea><br>-->
 				<!-- Button trigger modal -->
 				<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myModal">Generate</button>
+			</div>
+		</div>
 	</article>
 	<section>
 		<!-- Modal -->
@@ -1209,7 +1211,7 @@
 						<h4 class="modal-title" id="myModalLabel">This is your note!</h4>
 					</div>
 					<div class="modal-body">
-						<textarea id="selectedtext" placeholder="Selected Checkbox" style="display;none;"></textarea>
+						<textarea id="selectedtext" placeholder="Selected Checkbox"></textarea>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
@@ -1221,13 +1223,14 @@
 			<!-- /.modal-dialog -->
 		</div>
 		<!-- /.modal -->
-		</div>
-		</div>
+
 	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="assets/js/script.js"></script>
 </BODY>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="assets/js/script.js"></script>
 
 </HTML>
