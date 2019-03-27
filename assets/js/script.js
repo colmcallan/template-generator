@@ -1,9 +1,13 @@
-
+//The Below functions are all button selections of products and their corresponding
+//troubleshooting step options with resolution steps taken
+//they all feed into the text area in the modal 
+//associated with the "generate" button
 function myFunction() {
   var x = document.getElementById("skyQ1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -12,7 +16,8 @@ function classicSky() {
   var x = document.getElementById("skyHD1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -21,7 +26,8 @@ function adslBroadband() {
   var x = document.getElementById("ADSL1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -30,7 +36,8 @@ function troubleShootingBB() {
   var x = document.getElementById("TROUBLESHOOTBB");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -40,7 +47,8 @@ function ftthBroadband() {
   var x = document.getElementById("FTTH1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -49,7 +57,8 @@ function troubleShootingFFTH() {
   var x = document.getElementById("TROUBLESHOOTFFTH");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -58,7 +67,8 @@ function troubleShooting() {
   var x = document.getElementById("TROUBLESHOOT");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -67,7 +77,8 @@ function troubleShootingHD() {
   var x = document.getElementById("TROUBLESHOOTHD");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -76,7 +87,18 @@ function skyTalk() {
   var x = document.getElementById("TALK1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
+    x.style.display = "none";
+  }
+}
+
+function troubleShootingTalk() {
+  var x = document.getElementById("TROUBLESHOOTTalk");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -85,7 +107,8 @@ function billingCall() {
   var x = document.getElementById("BILLING1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
@@ -94,19 +117,40 @@ function upgradeCall() {
   var x = document.getElementById("UPGRADE1");
   if (x.style.display === "none") {
     x.style.display = "block";
-  } else {
+  }
+  else {
     x.style.display = "none";
   }
 }
+//End of product/resolution buttons
 
-///notes being added to text area
+//feed into text area when checked
 $(document).ready(function() {
-    $('.notes').click(function() {
-        var text = "";
-        $('.notes:checked').each(function() {
-            text += $(this).val() + ',';
-        });
-        text = text.substring(0, text.length - 1);
-        $('#selectedtext').val(text);
+  $('.notes').click(function() {
+    var text = "";
+    $('.notes:checked').each(function() {
+      text += $(this).val() + ',';
     });
+    text = text.substring(0, text.length - 1);
+    $('#selectedtext').val(text);
+  });
 });
+//uncheck all button
+function uncheckAll2() {
+  var inputs = document.querySelectorAll('.notes');
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].checked = false;
+  }
+}
+
+window.onload = function() {
+  window.addEventListener('load', checkAll2, false);
+};
+
+//clear text function in textarea
+var input = document.querySelector('#clear');
+var textarea = document.querySelector('#selectedtext');
+
+input.addEventListener('click', function() {
+  textarea.value = '';
+}, false);

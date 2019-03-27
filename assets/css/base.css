@@ -1,9 +1,10 @@
 body {
-  background: linear-gradient(to right, #1c242b 0%, #c600ef 99%);
+
   background-size: cover;
   max-height: none;
   overflow: auto;
   text-align: center;
+
 
 }
 
@@ -14,8 +15,14 @@ article {
 
 
 
+nav {
+  background-image: linear-gradient( to right, #f7921c, #f15d22, #ed1a27, #ed027c, #b52a86, #6d2f7e, #0b4ea0) !important;
 
+}
 
+.navbar-light .navbar-brand {
+  color: #ffffff
+}
 
 scroll,
 .scroller {
@@ -126,4 +133,150 @@ input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  display: -webkit-box;
+  margin: auto;
+}
+
+
+/* Style the buttons */
+
+/*.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+
+}
+
+/* Style the active class, and buttons on mouse-over */
+
+.active,
+.btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+#generatebtn {
+  color: white;
+  background-color: #49b32c;
+  border-color: #49b32c;
+  display: -webkit-box;
+  margin: auto;
+  font-weight: 400;
+}
+
+#generatebtn:hover {
+  background-color: #1e5110;
+  color: white;
+}
+
+#prdcbtn {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #ed1245;
+  border: 1px;
+  border-color: #ed1245;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#prdcbtn:hover {
+  background-color: #700b23;
+  color: white;
+}
+
+#unchkall {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #c93333;
+  border: 1px;
+  border-color: #c93333;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#unchkall:hover {
+  background-color: #7e0303;
+  color: white;
+
+}
+
+/*modal*/
+
+#clear {
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #c93333;
+  border: 1px;
+  border-color: #c93333;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+#clear:hover {
+  background-color: #7e0303;
+  color: white;
+
+}
+
+#close {
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #49b32c;
+  border: 1px;
+  border-color: #49b32c;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+#myModalLabel {
+  color: black;
 }
