@@ -147,7 +147,7 @@ window.onload = function() {
   window.addEventListener('load', checkAll2, false);
 };
 
-//clear text function in textarea
+//clear text function in texxttarea
 var input = document.querySelector('#clear');
 var textarea = document.querySelector('#selectedtext');
 
