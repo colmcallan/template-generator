@@ -2,136 +2,97 @@
 //troubleshooting step options with resolution steps taken
 //they all feed into the text area in the modal 
 //associated with the "generate" button
-function myFunction() {
-  var x = document.getElementById("skyQ1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
+//All utiliszing the jquery toggle function
 
-function classicSky() {
-  var x = document.getElementById("skyHD1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
+//SkyQ button
+$(document).ready(function() {
+  $("#prdctbtnQ").click(function() {
+    $("#skyQ1").toggle();
+  });
+});
 
-function adslBroadband() {
-  var x = document.getElementById("ADSL1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
+//SkyQ trouebleshooting
+$(document).ready(function() {
+  $("#Qtroublesht").click(function() {
+    $("#TROUBLESHOOT").toggle();
+  });
+});
+//HD
+$(document).ready(function() {
+  $("#prdctbtnHD").click(function() {
+    $("#skyHD1").toggle();
+  });
+});
 
-function troubleShootingBB() {
-  var x = document.getElementById("TROUBLESHOOTBB");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
+//Troubleshoot HD 
+$(document).ready(function() {
+  $("#troubleShootingHD").click(function() {
+    $("#TROUBLESHOOTHD").toggle();
+  });
+});
+
+//adslbroadband
+$(document).ready(function() {
+  $("#prdctbtnBB").click(function() {
+    $("#ADSL1").toggle();
+  });
+});
+
+//troubleshootbroadband button
+$(document).ready(function() {
+  $("#broadbandTrouble").click(function() {
+    $("#TROUBLESHOOTBB").toggle();
+  });
+});
+
+//FTTH
+$(document).ready(function() {
+  $("#prdctbtnFTTH").click(function() {
+    $("#FTTH1").toggle();
+  });
+}); 
+//FTTH troubleshooting
+$(document).ready(function() {
+  $("#trubleShootFTTH").click(function() {
+    $("#TROUBLESHOOTFFTH").toggle();
+  });
+});
+
+//Sky Talk
+$(document).ready(function() {
+  $("#prdctbtnTalk").click(function() {
+    $("#TALK1").toggle();
+  });
+});
+
+//Talk troubleshooting
+$(document).ready(function() {
+  $("#troubleShootingTalk").click(function() {
+    $("#TROUBLESHOOTTalk").toggle();
+  });
+});
+
+//Billing
+$(document).ready(function() {
+  $("#prdctbtnBill").click(function() {
+    $("#BILLING1").toggle();
+  });
+});
+
+//upgrade
+$(document).ready(function() {
+  $("#prdctbtnUpgrd").click(function() {
+    $("#UPGRADE1").toggle();
+  });
+});
 
 
-function ftthBroadband() {
-  var x = document.getElementById("FTTH1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function troubleShootingFFTH() {
-  var x = document.getElementById("TROUBLESHOOTFFTH");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function troubleShooting() {
-  var x = document.getElementById("TROUBLESHOOT");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function troubleShootingHD() {
-  var x = document.getElementById("TROUBLESHOOTHD");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function skyTalk() {
-  var x = document.getElementById("TALK1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function troubleShootingTalk() {
-  var x = document.getElementById("TROUBLESHOOTTalk");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function billingCall() {
-  var x = document.getElementById("BILLING1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function upgradeCall() {
-  var x = document.getElementById("UPGRADE1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
-
-function homeMove() {
-  var x = document.getElementById("HomeMove1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  }
-  else {
-    x.style.display = "none";
-  }
-}
+//homemove/engineerbutton
+$(document).ready(function() {
+  $("#prdctbtnHmmove").click(function() {
+    $("#HomeMove1").toggle();
+  });
+});
 //End of product/resolution buttons
 
 //feed into text area when checked
