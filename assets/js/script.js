@@ -79,6 +79,13 @@ $(document).ready(function() {
   });
 });
 
+//Upgrade Downgrade
+$(document).ready(function() {
+  $("#cancellation").click(function() {
+    $("#cancellationdowngrade").toggle();
+  });
+});
+
 //upgrade
 $(document).ready(function() {
   $("#prdctbtnUpgrd").click(function() {

@@ -152,7 +152,8 @@ input:checked+.slider:before {
 #TROUBLESHOOTTalk,
 #BILLING1,
 #UPGRADE1,
-#HomeMove1 {
+#HomeMove1,
+#cancellationdowngrade {
   display: none;
 }
 
