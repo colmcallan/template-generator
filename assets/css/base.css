@@ -151,7 +151,8 @@ input:checked+.slider:before {
 #TALK1,
 #TROUBLESHOOTTalk,
 #BILLING1,
-#UPGRADE1 {
+#UPGRADE1,
+#HomeMove1 {
   display: none;
 }
 
@@ -205,7 +206,8 @@ input:checked+.slider:before {
 #prdctbtnFTTH,
 #prdctbtnTalk,
 #prdctbtnBill,
-#prdctbtnUpgrd {
+#prdctbtnUpgrd,
+#prdctbtnHmmove {
   display: inline-block;
   font-weight: 400;
   color: white;

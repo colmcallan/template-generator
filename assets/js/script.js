@@ -122,6 +122,16 @@ function upgradeCall() {
     x.style.display = "none";
   }
 }
+
+function homeMove() {
+  var x = document.getElementById("HomeMove1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+  else {
+    x.style.display = "none";
+  }
+}
 //End of product/resolution buttons
 
 //feed into text area when checked
@@ -135,17 +145,6 @@ $(document).ready(function() {
     $('#selectedtext').val(text);
   });
 });
-//uncheck all button
-function uncheckAll2() {
-  var inputs = document.querySelectorAll('.notes');
-  for (var i = 0; i < inputs.length; i++) {
-    inputs[i].checked = false;
-  }
-}
-
-window.onload = function() {
-  window.addEventListener('load', checkAll2, false);
-};
 
 //clear text function in texxttarea
 var input = document.querySelector('#clear');
@@ -154,3 +153,8 @@ var textarea = document.querySelector('#selectedtext');
 input.addEventListener('click', function() {
   textarea.value = '';
 }, false);
+
+//refresh page
+function refreshPage() {
+  window.location.reload();
+}

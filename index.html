@@ -27,9 +27,10 @@
 	<article>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
-				<div class=" panel minheight">
+				<div class="panel minheight">
 
 					<!--Product Buttons-->
+
 					<button id="prdctbtnQ" type="button" class="btn btn-default" onclick="myFunction()">Sky Q</button>
 					<button id="prdctbtnHD" type="button" class="btn btn-default" onclick="classicSky()">Sky+HD/Sky+</button>
 					<button id="prdctbtnBB" type="button" class="btn btn-default" onclick="adslBroadband()">ADSL/Fibre Broadband</button>
@@ -37,7 +38,8 @@
 					<button id="prdctbtnTalk" type="button" class="btn btn-default" onclick="skyTalk()">Talk</button>
 					<button id="prdctbtnBill" type="button" class="btn btn-default" onclick="billingCall()">Billing</button>
 					<button id="prdctbtnUpgrd" type="button" class="btn btn-default" onclick="upgradeCall()">Upgrade</button>
-					<button id="unchkall" type="button" class="btn btn-default" onclick="uncheckAll2()">Uncheck All</button>
+					<button id="prdctbtnHmmove" type="button" class="btn btn-default" onclick="homeMove()">Home Move/Engineer</button>
+					<button id="unchkall" type="button" class="btn btn-default" onclick="refreshPage()">Refresh Page</button>
 
 					<!--Sky Q section and troubleshooting-->
 
@@ -46,14 +48,23 @@
 							<div class="sliderWrapper">
 								<div>No Satellite Signal&nbsp;&nbsp;</div>
 								<label class="switch">
-							<!--Fault Options for sky Q feed into textarea on click-->
                             <input type="checkbox" class="notes" value="Customer called in with NSS on their equipment."> <span class="slider round"></span>
                             </label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Sky Q failed and part recordings &nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer called in with failed/part recordings on their Q system."><span class="slider round"></span>
+							<input type="checkbox" class="notes" value="Customer called in with failed/part recordings on their Q system"><span class="slider round"></span>
+                            </label></div>
+							<div class="sliderWrapper">
+								<div>No sound&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in with no sound on their sky Q system"><span class="slider round"></span>
+                            </label></div>
+							<div class="sliderWrapper">
+								<div>Picture Issues&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in with picutre issues on their sky Q system"><span class="slider round"></span>
                             </label></div>
 							<div class="sliderWrapper">
 								<div>Loss of / no subtitles displayed when viewing a programme or recording&nbsp;&nbsp;</div>
@@ -65,7 +76,6 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="Customer called in regarding their pin settings on the Q boxes.Resolved by resetting their pin."><span class="slider round"></span>
                             </label></div>
-
 							<div class="sliderWrapper">
 								<div>Sky Q on demand content not responding&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -121,7 +131,6 @@
 						<!--troubleshooting steps for sky Q also feed into text area-->
 						<button type="button" class="btn btn-default" onclick="troubleShooting()">Troubleshooting Steps</button>
 						<div id="TROUBLESHOOT" style="display:none;">
-
 							<div class="sliderWrapper">
 								<div>Power Cycle&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -172,7 +181,7 @@
 							<div class="sliderWrapper">
 								<div>No&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="No, engineer required to resolve issue"><span class="slider round"></span>
+							<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span class="slider round"></span>
                             </label></div>
 							<h4>Did you book an engineer?</h4>
 							<div class="sliderWrapper">
@@ -281,6 +290,11 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="Customer called in to cancel their sky store purchase/buy and keep purchase"><span class="slider round"></span>
                             </label></div>
+							<div class="sliderWrapper">
+								<div>Missing Channels&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in missing channels on their service"><span class="slider round"></span>
+                            </label></div>
 						</form>
 						<br>
 						<!--SKY +HD troubleshooting steps hidden until clicked and hidden within Sky HD-->
@@ -339,7 +353,7 @@
 							<div class="sliderWrapper">
 								<div>No&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="No, engineer required to resolve issue"><span class="slider round"></span>
+							<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span class="slider round"></span>
                             </label></div>
 
 							<h4>Did you book an engineer?</h4>
@@ -468,6 +482,21 @@
 						<!--Troubleshooting steps broadband-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingBB()">Troubleshooting Steps</button>
 						<div id="TROUBLESHOOTBB">
+							<div class="sliderWrapper">
+								<div>Replaced router-in warranty&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="I've replaced the customers broadband router and its in warranty, no charge to the customer"><span class="slider round"></span>
+                            </label></div>
+							<div class="sliderWrapper">
+								<div>Replaced router-No charge out of warranty&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="I've sent the customer account details to my lead to replace the router with no charge"><span class="slider round"></span>
+                            </label></div>
+							<div class="sliderWrapper">
+								<div>Replaced router-charged customer&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="I've replaced the customers broadband router with a charge to the customer"><span class="slider round"></span>
+                            </label></div>
 							<div class="sliderWrapper">
 								<div>Checked and correct the internal setup&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -1034,6 +1063,11 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="Customer called in as they have been charged by sky however the payments don't match on their account, case escelated to the relevant department via CRF"><span class="slider round"></span>
                             </label></div>
+							<div class="sliderWrapper">
+								<div>Customer looking for a refund&nbsp;&nbsp;</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in as they are requesting to have a refund processed"><span class="slider round"></span>
+                            </label></div>
 
 						</FORM>
 						<!--resolution steps-->
@@ -1074,131 +1108,176 @@
 							<label class="switch">
 							<input type="checkbox" class="notes" value="I broke down the customers billing cost and what they are being charged for"><span class="slider round"></span>
                             </label></div>
-					</div>
-					<!--Upgrade choices-->
-					<div id="UPGRADE1">
-						<FORM id=FormUpgrade method=get name=FormName action=blah.php>
-							<h4>Subscription Upgrades</h4>
-							<div class="sliderWrapper">
-								<div>Customer called in looking for upgrade&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sent to lead to apply credit&nbsp;&nbsp;</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="I've sent the account to my team leader to have the credit applied as it's above my limit"><span class="slider round"></span>
+                            </label></div>
+						<div>Sent to lead to apply refund&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes" value="I've sent the account to my team leader to have the refund applied as it's above my limit"><span class="slider round"></span>
+                            </label></div>
+
+				<!--Upgrade choices-->
+				<div id="UPGRADE1">
+					<FORM id=FormUpgrade method=get name=FormName action=blah.php>
+						<h4>Subscription Upgrades</h4>
+						<div class="sliderWrapper">
+							<div>Customer called in looking for upgrade&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Customer called in looking to upgrade their subscription to"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Upsold the customer a package&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Upsold the customer a package&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Through our conversation with the customer, I upgraded them to"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Sports&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sports&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the full sports package at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Cinema&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Cinema&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the full cinema package at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>HD-Legacy&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>HD-Legacy&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the full HD-Legacy package at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>HD-standalone&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>HD-standalone&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the HD standalone product as part of the entertainment bundle at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Boxsets&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Boxsets&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the boxsets standalone product as part of the entertainment bundle at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>UOD&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>UOD&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the UOD product as part of the entertainment bundle at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>MS&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>MS&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the MS subscription for their household at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Kids&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Kids&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the kids subscription as part of the entertainment bundle at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Top Tier&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Top Tier&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Sports and Cinema at the offered price at this time"><span class="slider round"></span>
                             </label></div><br>
-							<div class="sliderWrapper">
-								<div>Sky Talk Anytime&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sky Talk Anytime&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="the sky talk anytime package on their Sky talk package at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<h4>Products Upgraded</h4>
-							<div class="sliderWrapper">
-								<div>ADSL Broadband&nbsp;&nbsp;</div>
-								<label class="switch">
+						<h4>Products Upgraded</h4>
+						<div class="sliderWrapper">
+							<div>ADSL Broadband&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have our ADSL broadband service on their account at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Fibre Broadband&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Fibre Broadband&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have our Fibre broadband service on their account at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>FTTH&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>FTTH&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have our FTTH broadband service on their account at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>VOIP&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>VOIP&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have our VOIP broadband service on their account at the offered price at this time"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q 1tb&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sky Q 1tb&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have their Sky equpiment upgraded to the sky Q1tb on their account, upfront payment has been taken"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q 2tb&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sky Q 2tb&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="have their Sky equpiment upgraded to the sky Q2tb on their account, upfront payment has been taken"><span class="slider round"></span>
                             </label></div>
-							<!--More questions-->
-							<h4>Re-contract applied to account?</h4>
-							<div class="sliderWrapper">
-								<div>TV- Yes&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Sky Q mini&nbsp;&nbsp;</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="have their Sky equpiment upgraded to have a mini on their account"><span class="slider round"></span>
+                            </label></div>
+						<!--More questions-->
+						<h4>Re-contract applied to account?</h4>
+						<div class="sliderWrapper">
+							<div>TV- Yes&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Customer took a recontract offer on their account for TV, advised of terms and conditions and key facts regarding it"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>TV-No&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>TV-No&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Customer's account has been upgraded however no re-contract has been applied"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>BB- Yes&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>BB- Yes&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="Customer took a recontract offer on their account for Broadband and Talk, advised of terms and conditions and key facts regarding it"><span class="slider round"></span>
                             </label></div>
-							<div class="sliderWrapper">
-								<div>Key Facts Have Been Read&nbsp;&nbsp;</div>
-								<label class="switch">
+						<div class="sliderWrapper">
+							<div>Key Facts Have Been Read&nbsp;&nbsp;</div>
+							<label class="switch">
 							<input type="checkbox" class="notes" value="all relevant key facts have been read out to the customer and they are aware of their agreement. and the process of removing the upgrade they took"><span class="slider round"></span>
                             </label></div>
-						</FORM>
-					</div>
+					</FORM>
 				</div>
-				<!--<textarea id="selectedtext" placeholder="Selected Checkbox" style="display;none;"></textarea><br>-->
-				<!-- Button trigger modal -->
-				<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myModal">Generate</button>
+				<!--Home Move options and steps taken-->
+				<div id="HomeMove1">
+					<FORM id=FormHome method=get name=FormName action=blah.php>
+						<div class="sliderWrapper">
+							<div>Home Move - TV only&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in to arrange a home move, they only have TV"><span class="slider round"></span>
+                            </label></div>
+						<div class="sliderWrapper">
+							<div>Home Move - TV & BB&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in to arrange a home move, they are looking to move BBT and TV to their new address"><span class="slider round"></span>
+                            </label></div>
+						<div class="sliderWrapper">
+							<div>Engineer ETA query (TV)&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in to query the ETA of when the engineer would arrive, advised engineer would be in contact with a window of time where they will be at the property"><span class="slider round"></span>
+                            </label></div>
+						<div class="sliderWrapper">
+							<div>Engineer ETA query (BBT)&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="Customer called in to query the ETA of when the engineer would arrive for their BBT talk fault, advised of SLA"><span class="slider round"></span>
+                            </label></div>
+					</FORM>
+				</div>
 			</div>
+		</div>
+		</div>
+		<!--<textarea id="selectedtext" placeholder="Selected Checkbox" style="display;none;"></textarea><br>-->
+		<!-- Button trigger modal -->
+		<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myModal">Generate</button>
+		</div>
 		</div>
 	</article>
 	<section>
@@ -1217,6 +1296,7 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
 						<button type="button" class="btn btn-default" id="clear">Clear Text</button>
 					</div>
+
 				</div>
 				<!-- /.modal-content -->
 			</div>
