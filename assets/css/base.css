@@ -12,6 +12,15 @@ article {
 
 
 
+.list ul {
+  text-align: center;
+  list-style-position: inside;
+}
+
+
+
+
+
 nav {
   background-image: linear-gradient( to right, #f7921c, #f15d22, #ed1a27, #ed027c, #b52a86, #6d2f7e, #0b4ea0) !important;
 
