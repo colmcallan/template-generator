@@ -18,9 +18,11 @@
 			<span class="navbar-brand mb-0 h1">Stan Note Generator</span>
 		</nav>
 		<br>
-		
-		<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myInstructions">Instructions!</button>
-
+		<div class="header-button">
+			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myInstructions">Instructions!</button>
+			&nbsp;&nbsp;
+			<button id="unchkall" type="button" class="btn btn-default" onclick="refreshPage()">Refresh Page</button>
+		</div>
 		<hr>
 	</header>
 	<article>
@@ -38,7 +40,7 @@
 					<button id="prdctbtnBill" type="button" class="btn btn-default" onclick="billingCall()">Billing</button>
 					<button id="prdctbtnUpgrd" type="button" class="btn btn-default" onclick="upgradeCall()">Upgrade</button>
 					<button id="prdctbtnHmmove" type="button" class="btn btn-default" onclick="homeMove()">Home Move/Engineer</button>
-					<button id="unchkall" type="button" class="btn btn-default" onclick="refreshPage()">Refresh Page</button>
+
 
 					<!--Sky Q section and troubleshooting-->
 
@@ -127,7 +129,7 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="with connectivitiy issues on their Sky Q system"><span class="slider round"></span>
                             </label></div>
-                            <div class="sliderWrapper">
+							<div class="sliderWrapper">
 								<div>Sky Q intermittent connectivity issue&nbsp;&nbsp;</div>
 								<label class="switch">
 							<input type="checkbox" class="notes" value="with intermittent connectivitiy issues on their Sky Q system"><span class="slider round"></span>
@@ -192,7 +194,7 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="Checked all dish input cables on the customers equipment and there was no issue"><span class="slider round"></span>
                             </label></div>
-                            <div class="sliderWrapper">
+							<div class="sliderWrapper">
 								<div>Connection to bb router fail / connection to on demand fail&nbsp;&nbsp;</div>
 								<label class="switch">
 							<input type="checkbox" class="notes" value="the Sky Q box is not connected to the customers broadband service and there is appears to be an issue connecting to it"><span class="slider round"></span>
