@@ -3,6 +3,7 @@
 //they all feed into the text area in the modal 
 //associated with the "generate" button
 //All utiliszing the jquery toggle function
+//<!--All code used in this is copyright to Colm Callan, colm.callan@sky.ie-->
 
 //SkyQ button
 $(document).ready(function() {
