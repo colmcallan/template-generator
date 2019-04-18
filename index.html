@@ -11,6 +11,7 @@
 	<TITLE>MHR notes templates</TITLE>
 </HEAD>
 <!--All code used in this is copyright to Colm Callan, colm.callan@sky.ie-->
+
 <BODY>
 	<header>
 		<!-- As a heading -->
@@ -19,8 +20,7 @@
 		</nav>
 		<br>
 		<div class="header-button">
-			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myInstructions">Instructions!</button>
-			&nbsp;&nbsp;
+			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myInstructions">Instructions!</button> &nbsp;&nbsp;
 			<button id="unchkall" type="button" class="btn btn-default" onclick="refreshPage()">Refresh Page</button>
 		</div>
 		<hr>
@@ -67,6 +67,12 @@
 								<div>No Satellite Signal&nbsp;&nbsp;</div>
 								<label class="switch">
                             <input type="checkbox" class="notes" value="with NSS on their equipment"> <span class="slider round"></span>
+                            </label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Technical Fault with this channel&nbsp;&nbsp;</div>
+								<label class="switch">
+                            <input type="checkbox" class="notes" value="with an OSM, technical fault with this channel"> <span class="slider round"></span>
                             </label>
 							</div>
 							<div class="sliderWrapper">
@@ -307,6 +313,12 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="enquiring how to restore previously deleted programs from their sky box,Ran through how to restore previously deleted items in the deleted folder on the planner and issue is now resolved. No further action required advised to call back in if needs more assistance"><span class="slider round"></span>
                             </label></div>
+							<div class="sliderWrapper">
+								<div>Technical Fault with this channel&nbsp;&nbsp;</div>
+								<label class="switch">
+                            <input type="checkbox" class="notes" value="with an OSM, technical fault with this channel"> <span class="slider round"></span>
+                            </label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Viewing card issue&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -1435,6 +1447,11 @@
 							<label class="switch">
 							<input type="checkbox" class="notes" value="I've sent the account to my team leader to have the refund applied as it's above my limit"><span class="slider round"></span>
                             </label></div>
+						<div class="sliderWrapper">
+							<div>High Call charges out of talk of package&nbsp;&nbsp;</div>
+							<label class="switch">
+							<input type="checkbox" class="notes" value="Advised the customer that there are call charges on the account that are outside of their talk package and have been charged in this bill"><span class="slider round"></span>
+                            </label></div>
 
 						<!--Cancellation/downgrade requests-->
 						<br>
@@ -1741,6 +1758,12 @@
 							<input type="checkbox" class="notes" value="no charge is applicable to the customer as they are opting to upgrade their account to have broadband with Sky at their new address"><span class="slider round"></span>
                             </label></div>
 							<div class="sliderWrapper">
+								<div>Yes - Premium Visit&nbsp;&nbsp;
+								</div>
+								<label class="switch">
+							<input type="checkbox" class="notes" value="I've booked the customer in for a home move date on a saturday and advised of the charge associated with their home move"><span class="slider round"></span>
+                            </label></div>
+							<div class="sliderWrapper">
 								<div>Opened MHR to replace broadband order at new address&nbsp;&nbsp;
 								</div>
 								<label class="switch">
@@ -1784,6 +1807,7 @@
 								<label class="switch">
 							<input type="checkbox" class="notes" value="to cancel their installation that they had booked in, sent account to Team Lead to have relevant credits applied"><span class="slider round"></span>
                             </label></div>
+
 						</FORM>
 					</div>
 				</div>
@@ -1794,7 +1818,10 @@
 			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myModal">Generate</button>
 		</div>
 		</div>
-		<footer><p>&copy; Colm Callan, Email: colm.callan@sky.ie<p></footer>
+		<footer>
+			<p>&copy; Colm Callan, Email: colm.callan@sky.ie
+				<p>
+		</footer>
 	</article>
 	<section>
 		<!-- Modal Generates notes template -->
