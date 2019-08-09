@@ -93,6 +93,46 @@ $(document).ready(function() {
     $("#UPGRADE1").toggle();
   });
 });
+//Sky Sports Upgrade
+$(document).ready(function() {
+  $("#sportsup").click(function() {
+    $("#Sportsupgrd").toggle();
+  });
+});
+
+//cinema upgrade button
+$(document).ready(function() {
+  $("#cinemaupgrd").click(function() {
+    $("#Cinemaupgrade").toggle();
+  });
+});
+
+//toptier upgrade
+$(document).ready(function() {
+  $("#toptierupgrd").click(function() {
+    $("#toptierupgrade").toggle();
+  });
+});
+//base upgrade
+$(document).ready(function() {
+  $("#baseupgrd").click(function() {
+    $("#baseupgrade").toggle();
+  });
+});
+
+//Standalone upgrade
+$(document).ready(function() {
+  $("#standaloneupg").click(function() {
+    $("#standaloneupgrade").toggle();
+  });
+});
+
+//products upgraded
+$(document).ready(function() {
+  $("#prodctsupgrade").click(function() {
+    $("#productsupgrade").toggle();
+  });
+});
 
 
 //homemove/engineerbutton
