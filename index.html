@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/base.css" />
 	<TITLE>MHR notes templates</TITLE>
 </HEAD>
@@ -16,11 +17,12 @@
 	<header>
 		<!-- As a heading -->
 		<nav class="navbar navbar-light bg-light">
-			<span class="navbar-br& mb-0 h1">Stan Note Generator</span>
+			<span class="navbar-br& mb-0 h1" style="color:white;">Stan Note Generator</span>
 		</nav>
 		<br>
 		<div class="header-button">
-			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myInstructions">Instructions!</button> &nbsp;&nbsp;
+			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal"
+				data-target="#myInstructions">Instructions!</button> &nbsp;&nbsp;
 			<button id="unchkall" type="button" class="btn btn-default" onclick="refreshPage()">Refresh Page</button>
 		</div>
 		<hr>
@@ -28,928 +30,1383 @@
 	<article>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
-				<div class="panel minheight">
-
-					<!--Product Buttons-->
-
-					<button id="prdctbtnQ" type="button" class="btn btn-default" onclick="myFunction()">Sky Q</button>
-					<button id="prdctbtnHD" type="button" class="btn btn-default" onclick="classicSky()">Sky+HD/Sky+</button>
-					<button id="prdctbtnBB" type="button" class="btn btn-default" onclick="adslbroadband()">ADSL/Fibre broadband</button>
-					<button id="prdctbtnFTTH" type="button" class="btn btn-default" onclick="ftthbroadband()">FTTH</button>
-					<button id="prdctbtnTalk" type="button" class="btn btn-default" onclick="skyTalk()">Talk</button>
+				<div id="groupbtns">
+				<div id="all buttons">
+					<!--tv-->
+						<button id="TVbtn" type="button" class="btn btn-default" onclick="tvbutton()">TV Issues</button>
+						<!--toggle tv options with button-->
+						
+						<!--end toggle of tv options-->
+						<button id="BBbtn" type="button" class="btn btn-default" onclick="tvbutton()">Broadband & Talk
+							issues</button>
+						
+					
+						
 					<button id="prdctbtnBill" type="button" class="btn btn-default" onclick="billingCall()">Billing</button>
 					<button id="prdctbtnUpgrd" type="button" class="btn btn-default" onclick="upgradeCall()">Upgrade</button>
 					<button id="prdctbtnHmmove" type="button" class="btn btn-default" onclick="homeMove()">Home Move/Engineer</button>
-
-
+					</div>	
+					<div id="tvshow" style="display:none;">
+							<button id="prdctbtnQ" type="button" class="btn btn-default" onclick="myFunction()">Sky Q</button>
+							<button id="prdctbtnHD" type="button" class="btn btn-default"
+								onclick="classicSky()">Sky+HD/Sky+</button>
+						</div>
+					<div id="bbshow" style="display:none;">
+							<button id="prdctbtnBB" type="button" class="btn btn-default" onclick="adslbroadband()">Sky Broadband Essential/Superfast
+								broadband</button>
+							<button id="prdctbtnFTTH" type="button" class="btn btn-default"
+								onclick="ftthbroadband()">Sky Broadband Ultrafast</button>
+							<button id="prdctbtnTalk" type="button" class="btn btn-default" onclick="skyTalk()">Talk</button>
+							<!--<button id="bbtte" type="button" class="btn btn-default"
+									onclick="bbtte()">Appointments BBTTE</button-->
+							</div>				
+					</div>
 					<!--Sky Q section & troubleshooting-->
 
-					<div id="skyQ1">
-						<FORM id=FormQ method=get name=FormName action=blah.php>
-							<div class="accntholder">
-								<h3>Account Holder or Password Holder?</h3>
-								<div class="sliderWrapper">
-									<div>Account holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Account holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
-								<div class="sliderWrapper">
-									<div>Password holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Password holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
+				<div id="skyQ1">
+					<FORM id=FormQ method=get name=FormName action=blah.php>
+						<div class="accntholder">
+							<h3>Account Holder or Password Holder?</h3>
+							<div class="sliderWrapper">
+								<div>Account holder&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="Account holder called in"> <span
+										class="slider round"></span>
+								</label>
 							</div>
-							<!--Issues-->
-							<h4>Issues With Service</h4>
+							<div class="sliderWrapper">
+								<div>Password holder&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="Password holder called in"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<!--Issues-->
+						<h4>Issues With Service</h4>
+						<!--Issue button options for TV-->
+						<button id="pictureissue" type="button" class="btn btn-default" onclick="myFunction()">Picture
+							issues</button>
+						<button id="nssissue" type="button" class="btn btn-default" onclick="myFunction()">Satelite
+							signal issues/connectivity with mini</button>
+						<button id="recording" type="button" class="btn btn-default" onclick="myFunction()">Recording
+							issues/channel faults</button>
+						<button id="hrdware" type="button" class="btn btn-default"
+							onclick="myFunction()">Equipment/hardware issues</button>
+						<!--end of buttons for issues-->
+
+						<!--picture issues for Q-->
+						<div id="pictureq" style="display:none;">
+							<div class="sliderWrapper">
+								<div>Picture Issues&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with picutre issues on their sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Picture Issues - pixelated/broken&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with picture issues on their, broken/pixelated sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShooting()"
+								id="Qtroublesht">Troubleshooting Steps</button>
+						</div>
+
+
+						<!--end of picture issues Q-->
+						<!--Satelitte Signal Issues/connectivity-->
+						<div id="signalQ" style="display:none;">
 							<div class="sliderWrapper">
 								<div>No Satellite Signal&nbsp;&nbsp;</div>
 								<label class="switch">
-                            <input type="checkbox" class="notes" value="with NSS on their equipment"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes" value="with NSS on their equipment"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Sky Q mini not working &nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with an issue with their Q mini box"><span class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Sky Q connectivity issue&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with connectivitiy issues on their Sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Sky Q intermittent connectivity issue&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with intermittent connectivitiy issues on their Sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Sky Q on demand content not responding&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues on their on demand services. Unable to access content/content not responding/no playback"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShooting()"
+								id="Qtroublesht2">Troubleshooting Steps</button>
+						</div>
+
+						<!--end of NSS/connectivity-->
+						<!--recording issues/channel faults-->
+						<div id="recordingQ" style="display:none;">
+							<div class="sliderWrapper">
+								<div>Sky Q on demand content not responding&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues on their on demand services. Unable to access content/content not responding/no playback"><span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Technical Fault with this channel&nbsp;&nbsp;</div>
 								<label class="switch">
-                            <input type="checkbox" class="notes" value="with an OSM, technical fault with this channel"> <span class="slider round"></span>
-                            </label>
-							</div>
-							<div class="sliderWrapper">
-								<div>Stuck on st&by&nbsp;&nbsp;</div>
-								<label class="switch">
-                            <input type="checkbox" class="notes" value="with their sky Q equipment stuck on st&by"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes"
+										value="with an OSM, technical fault with this channel"> <span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Sky Q failed & part recordings &nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with failed/part recordings on their Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q mini not working &nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with an issue with their Q mini box"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Live pause not working&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on the live pause function"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No sound&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with no sound on their sky Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Picture Issues&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with picutre issues on their sky Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Viewing card issue&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with viewing card issues on their sky Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Loss of / no subtitles displayed when viewing a programme or recording&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with no subtitles when viewing a live program/recording on their sky Q box"> <span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q PIN settings&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="regarding their pin settings on the Q boxes.Resolved by resetting their pin"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q on dem& content not responding&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their on dem& services. Unable to access content/content not responding/no playback"><span class="slider round"></span>
-                            </label></div>
-                            <div class="sliderWrapper">
-								<div>Frozen or unresponsive&nbsp;&nbsp;</div>
-								<label class="switch">
-                            <input type="checkbox" class="notes" value="with their sky Q equipment frozen/unresponsive"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes"
+										value="with failed/part recordings on their Q system"><span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
-								<div>Change pin&nbsp;&nbsp;</div>
+								<div>Loss of / no subtitles displayed when viewing a programme or recording&nbsp;&nbsp;
+								</div>
 								<label class="switch">
-                            <input type="checkbox" class="notes" value="to change their pin number"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes"
+										value="with no subtitles when viewing a live program/recording on their sky Q box">
+									<span class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Failed Recording - Disk Read error&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with failed recordings due to a disk read error"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with failed recordings due to a disk read error"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Recording & live pause functions not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues with their recordings & live pause not working on their Q services"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q connectivity issue&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with connectivitiy issues on their Sky Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q intermittent connectivity issue&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with intermittent connectivitiy issues on their Sky Q system"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Q on dem& content not responding&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their on dem& services. Unable to access content/content not responding/no playback"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues with their recordings & live pause not working on their Q services"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Sky Q box recording & playback issues&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with recording & play back issues including picture/sound issues on playback"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Viewing Card Issues&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with viewing card issue & OSM"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Sky Box Office programme missing from the Planner&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding a sky box office event not appearing in their planner"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Book a Sky Box Office event&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to book the PPV event on their main box. Explained booking fee & cost of the event & that it will appear in their next billing cycle"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Cancel a Sky Store Buy & Keep movie or Box Set&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to cancel their sky store purchase/buy & keep purchase"><span class="slider round"></span>
-                            </label></div>
-						</form>
-						<br>
-						<!--troubleshooting steps for sky Q also feed into text area-->
-						<button type="button" class="btn btn-default" onclick="troubleShooting()" id="Qtroublesht">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOT" style="display:none;">
-							<div class="sliderWrapper">
-								<div>Power Cycle&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We performed a power cycle of the Sky Q equipment"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Replacement viewing card issued&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've replaced the customers viewing card & advised of the turnaround time for this too arrive"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reset Settings&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a reset of the Sky Q settings"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>System Reset&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="System reset performed, advised of loss of recordings"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked dish input cables-Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Checked all dish input cables on the customers equipment & there was no issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Connection to bb router fail / connection to on dem& fail&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the Sky Q box is not connected to the customers broadband service & there is appears to be an issue connecting to it"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked dish input cables-Not Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Checked all dish input cables on the customers equipment & there was signs of an issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Factory Reset&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Reseted settings to factory default"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>The Connection To broadband Is Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the Sky Q box is connected to the customers broadband service & there is no issues with it"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Disconnect & Reconnect Network&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We performed a reset of network settings on the Sky Q equipment"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Resent Signals & Paired Card&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="All signals have re-sent & the viewing card has been paired, advised up to a 4 hour wait for this to take effect"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Software Download&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a software download on the Sky Q box"><span class="slider round"></span>
-                            </label></div>
-							<!--resolution options feed into text area when clicked-->
-							<h4>Did you Resolve the issue?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Resolved over the phone, no further steps needed"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Advised to use the Sky Q app&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="As a short term resoltion, I explained to the customer that they can use the Sky Q app to continue viewing their subscription"><span class="slider round"></span>
-                            </label></div>
-							<!--Engineeer booking-->
-							<h4>Did you book an engineer?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Engineer booked for next available date with the customer"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="No engineer has been booked at this time"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Premium Visit&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer is booked in for a premium visit. Advised of charge associated with it"><span class="slider round"></span>
-                            </label></div>
-							<!--Credit Application-->
-							<h4>Did you apply a Loss of service credit?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've applied the relevant loss of service credit on the customers account"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Above actor role&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've sent a credit request to my team leader as it is above my actor role"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Credit not required&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="no credit is required to be applied as of now"><span class="slider round"></span>
-                            </label></div>
-							<hr>
-						</div>
-					</div>
-
-
-
-
-					<!--Sky+hd notes toggle on click & generate in textarea.-->
-
-					<div id="skyHD1">
-						<FORM id=Form+HD method=get name=FormName action=blah.php>
-							<!--Account holder question-->
-							<div class="accntholder">
-								<h3>Account Holder or Password Holder?</h3>
-								<div class="sliderWrapper">
-									<div>Account holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Account holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
-								<div class="sliderWrapper">
-									<div>Password holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Password holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
+									<input type="checkbox" class="notes"
+										value="with recording & play back issues including picture/sound issues on playback"><span
+										class="slider round"></span>
+								</label>
 							</div>
-							<!--technical issues with TV multiple options-->
-							<h4>Issues With Service</h4>
-							<div class="sliderWrapper">
-								<div>NSS&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with NSS on sky +HD/Sky+ Box. Completed troubleshooting steps as per iknow2"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Undelete / restore or permanently delete your recordings&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="enquiring how to restore previously deleted programs from their sky box,Ran through how to restore previously deleted items in the deleted folder on the planner & issue is now resolved. No further action required advised to call back in if needs more assistance"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Technical Fault with this channel&nbsp;&nbsp;</div>
-								<label class="switch">
-                            <input type="checkbox" class="notes" value="with an OSM, technical fault with this channel"> <span class="slider round"></span>
-                            </label>
-							</div>
-							<div class="sliderWrapper">
-								<div>Viewing card issue&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding their viewing card"><span class="slider round"></span>
-                            </label></div>
 							<div class="sliderWrapper">
 								<div>Live pause not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on the live pause function"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues on the live pause function"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>MS not working&nbsp;&nbsp;</div>
+								<div>Sky Box Office programme missing from the Planner&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their multiscreen box"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues regarding a sky box office event not appearing in their planner"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShooting()"
+								id="Qtroublesht3">Troubleshooting Steps</button>
+						</div>
+
+						<!--end of recording/channel faults-->
+						<!--hardware/equipment issues-->
+						<div id="hardwareissuesq" style="display:none;">
 							<div class="sliderWrapper">
-								<div>Recordings not working/failing&nbsp;&nbsp;</div>
+								<div>Stuck on standby&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding their planner – issue with recordings/ recordings not showing in planner"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with their sky Q equipment stuck on standby"> <span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>Stuck in st&by&nbsp;&nbsp;</div>
+								<div>Sky Q PIN settings&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with their box stuck in st&by mode & would not turn on with the sky remote or by pressing the power button on the sky box"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Freezing/frozen/blocking images on playback of all recordings&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with their box freezing/frozen/blocking images on playback of all recordings"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Downloading programme displays as paused&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding there downloads from on dem& displaying as paused on all downloads"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Loss of/no subtitles displayed when viewing a programme or recording&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding subtitles missing on live TV & or recordings"><span class="slider round"></span>
-                            </label></div>
-                            <div class="sliderWrapper">
-								<div>Stuck on st&by&nbsp;&nbsp;</div>
-								<label class="switch">
-                            <input type="checkbox" class="notes" value="with their sky equipment stuck on st&by"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes"
+										value="regarding their pin settings on the Q boxes.Resolved by resetting their pin"><span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Frozen or unresponsive&nbsp;&nbsp;</div>
 								<label class="switch">
-                            <input type="checkbox" class="notes" value="with their sky equipment frozen/unresponsive"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes"
+										value="with their sky Q equipment frozen/unresponsive"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Change pin&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="to change their pin number"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Viewing Card Issues&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="with viewing card issue & OSM"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>No sound&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with no sound on their sky Q system"><span class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShooting()"
+								id="Qtroublesht4">Troubleshooting Steps</button>
+						</div>
+						<!--end of hardware/equipment issues-->
+
+					</form>
+					<br>
+					<!--troubleshooting steps for sky Q also feed into text area-->
+					<div id="TROUBLESHOOT" style="display:none;">
+						<div class="sliderWrapper">
+							<div>Power Cycle&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="We performed a power cycle of the Sky Q equipment"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Replacement viewing card issued&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've replaced the customers viewing card & advised of the turnaround time for this too arrive"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Reset Settings&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a reset of the Sky Q settings"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>System Reset&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="System reset performed, advised of loss of recordings"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Checked dish input cables-Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Checked all dish input cables on the customers equipment & there was no issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Connection to bb router fail / connection to on dem& fail&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="the Sky Q box is not connected to the customers broadband service & there is appears to be an issue connecting to it"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Checked dish input cables-Not Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Checked all dish input cables on the customers equipment & there was signs of an issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Factory Reset&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes" value="Reseted settings to factory default"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>The Connection To broadband Is Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="the Sky Q box is connected to the customers broadband service & there is no issues with it"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Disconnect & Reconnect Network&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="We performed a reset of network settings on the Sky Q equipment"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Resent Signals & Paired Card&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="All signals have re-sent & the viewing card has been paired, advised up to a 4 hour wait for this to take effect"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Software Download&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a software download on the Sky Q box"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--resolution options feed into text area when clicked-->
+						<h4>Did you Resolve the issue?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Resolved over the phone, no further steps needed"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Advised to use the Sky Q app&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="As a short term resoltion, I explained to the customer that they can use the Sky Q app to continue viewing their subscription"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--Engineeer booking-->
+						<h4>Did you book an engineer?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Engineer booked for next available date with the customer"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="No engineer has been booked at this time"><span class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Premium Visit&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Customer is booked in for a premium visit. Advised of charge associated with it"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<h4>Is it an MDU visit?</h4>
+						<div class="sliderWrapper">
+							<div>Yes - updated MDU site also&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Customers service runs off a shared dish, updated the MDU site and booked service call"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - issue resolved&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="No engineer has been booked at this time no need to enter MDU details"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--Credit Application-->
+						<h4>Did you apply a Loss of service credit?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've applied the relevant loss of service credit on the customers account"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - Above actor role&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've sent a credit request to my team leader as it is above my actor role"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - Credit not required&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="no credit is required to be applied as of now"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<hr>
+					</div>
+				</div>
+
+				<!--Sky+hd notes toggle on click & generate in textarea.-->
+
+				<div id="skyHD1">
+					<FORM id=Form+HD method=get name=FormName action=blah.php>
+						<!--Account holder question-->
+						<div class="accntholder">
+							<h3>Account Holder or Password Holder?</h3>
+							<div class="sliderWrapper">
+								<div>Account holder&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="Account holder called in"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Password holder&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="Password holder called in"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<!--technical issues with TV multiple options-->
+						<h4>Issues With Service</h4>
+						<button id="pictureissuehd" type="button" class="btn btn-default" onclick="myFunction()">Picture
+							issues</button>
+						<button id="nssissuehd" type="button" class="btn btn-default" onclick="myFunction()">Satelite
+							signal issues/channel issues</button>
+						<button id="recordinghd" type="button" class="btn btn-default" onclick="myFunction()">Recording
+							issues/playback + issues</button>
+						<button id="hrdwarehd" type="button" class="btn btn-default"
+							onclick="myFunction()">Equipment/hardware issues</button>
+						<!--Picture issues-->
+						<div id="pcturhd" style="display:none;">
+							<div class="sliderWrapper">
+								<div>Picture Issues&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with picutre issues on their sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Picture Issues - pixelated/broken&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with picture issues on their, broken/pixelated sky Q system"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Picture but no sound&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with pictures but no sound on their equipment"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShootingHD()"
+								id="troubleShootingHD">Troubleshooting Steps</button>
+						</div>
+						<!--NSS/channel issues-->
+						<div id="nsshd" style="display:none;">
+							<div class="sliderWrapper">
+								<div>NSS&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with NSS on sky +HD/Sky+ Box. Completed troubleshooting steps as per iknow2"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Technical Fault with this channel&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with an OSM, technical fault with this channel"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Freezing/frozen/blocking images on playback of all recordings&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with their box freezing/frozen/blocking images on playback of all recordings"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Missing Channels&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="missing channels on their service"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShootingHD()"
+								id="troubleShootingHD2">Troubleshooting Steps</button>
+
+						</div>
+						<!--end of NSS/channel issues-->
+						<!--Recording issues/playback issues-->
+						<div id="playbackhd" style="display:none;">
+							<div class="sliderWrapper">
+								<div>Undelete / restore or permanently delete your recordings&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="enquiring how to restore previously deleted programs from their sky box,Ran through how to restore previously deleted items in the deleted folder on the planner & issue is now resolved. No further action required advised to call back in if needs more assistance"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Live pause not working&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues on the live pause function"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Recordings not working/failing&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues regarding their planner – issue with recordings/ recordings not showing in planner"><span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Series Links are not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their series link on their sky+ box/HD+ box"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues on their series link on their sky+ box/HD+ box"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Series Links are not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their series link on their sky+ box/HD+ box"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues on their series link on their sky+ box/HD+ box"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Lost hard disk space/less recording space in the Planner&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues on their planner. Lost hard disk space/less recording space in the planner"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues on their planner. Lost hard disk space/less recording space in the planner"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Downloading programme displays as paused&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues regarding there downloads from on dem& displaying as paused on all downloads"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Loss of/no subtitles displayed when viewing a programme or recording&nbsp;&nbsp;
+								</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with issues regarding subtitles missing on live TV & or recordings"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Sky Box Office programme missing from the Planner&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with issues regarding a sky box office event not appearing in their planner"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues regarding a sky box office event not appearing in their planner"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>No dual recording functionality&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with only one feed going into their sky+/+HD box"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with only one feed going into their sky+/+HD box"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Sky box unable to delete recordings&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="unable to remove items from their planner"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="unable to remove items from their planner"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShootingHD()"
+								id="troubleShootingHD3">Troubleshooting Steps</button>
+
+						</div>
+						<!--end of recording issues/playback issues-->
+						<!--Equipment/hardware issues-->
+						<div id="equipHD" style="display:none;">
 							<div class="sliderWrapper">
-								<div>Sky box freezes/locks up when accessing the Planner or playing a recordingt&nbsp;&nbsp;</div>
+								<div>Viewing card issue&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with their sky+/+HD box freezing & becoming unresponsive when they access their planner or begin watching a recording"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with issues regarding their viewing card"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>Book a Sky Box Office event&nbsp;&nbsp;</div>
+								<div>MS not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="to book the PPV event on their main box. Explained booking fee & cost of the event & that it will appear in their next billing cycle"><span class="slider round"></span>
-                            </label></div>
-                            <div class="sliderWrapper">
+									<input type="checkbox" class="notes"
+										value="with issues on their multiscreen box"><span class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Stuck in standby&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with their box stuck in st&by mode & would not turn on with the sky remote or by pressing the power button on the sky box"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Stuck on standby&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with their sky equipment stuck on st&by"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Frozen or unresponsive&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with their sky equipment frozen/unresponsive"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Sky box freezes/locks up when accessing the Planner or playing a
+									recordingt&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes"
+										value="with their sky+/+HD box freezing & becoming unresponsive when they access their planner or begin watching a recording"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
 								<div>Change pin&nbsp;&nbsp;</div>
 								<label class="switch">
-                            <input type="checkbox" class="notes" value="to change their pin number"> <span class="slider round"></span>
-                            </label>
+									<input type="checkbox" class="notes" value="to change their pin number"> <span
+										class="slider round"></span>
+								</label>
 							</div>
 							<div class="sliderWrapper">
 								<div>Cancel a Sky Store Buy & Keep movie or Box Set&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="to cancel their sky store purchase/buy & keep purchase"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Missing Channels&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="missing channels on their service"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>On Dem& connector not working&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="has an issue with their onDem& connector"><span class="slider round"></span>
-                            </label></div>
-						</form>
-						<!--end of issues-->
-						<br>
-						<!--SKY +HD troubleshooting steps hidden until clicked & hidden within Sky HD-->
-						<button type="button" class="btn btn-default" onclick="troubleShootingHD()" id="troubleShootingHD">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTHD">
-
-							<div class="sliderWrapper">
-								<div>Manual Reboot&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We performed a power cycle of the Sky box affected"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div> System Reset&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a reset of the Sky box, advised customer they will lose all of their recordings"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked dish input cables-Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Checked all dish input cables on the customers equipment & there was no issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked dish input cables-Not Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Checked all dish input cables on the customers equipment & there was signs of an issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>The Connection To broadband Is Okay&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the Sky box is connected to the customers broadband service & there is no issues with it"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Disconnect & Reconnect Network&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We performed a reset of network settings on the Sky equipment"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Resent Signals & Paired Card&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="All signals have re-sent & the viewing card has been paired, advised up to a 4 hour wait for this to take effect"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Software Download&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a software download on the Sky box"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Planner Rebuild&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a planner rebuild on the affected Sky box. No loss of recordings with this step"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Front Panel Reset&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a front panel reset to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reset Network connection&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we performed a front panel reset to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Replaced viewing card&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've replaced the viewing card for the customer & advised of the turnaround time for this"><span class="slider round"></span>
-                            </label></div>
-							<!--end of troubleshooting steps-->
-
-
-							<!--Resolution steps taken to resolve issues in +HD all feed into texxt area onclick-->
-
-							<h4>Did you Resolve the issue?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Resolved over the phone, no further steps needed"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Advised to use Sky Go&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="As a short term resoltion, I explained to the customer that they can use Sky Go to continue viewing their subscription"><span class="slider round"></span>
-                            </label></div>
-							<!--engineer booking-->
-							<h4>Did you book an engineer?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Engineer booked for next available date with the customer"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="No engineer has been booked at this time"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Premium Visit&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer is booked in for a premium visit. Advised of charge associated with it"><span class="slider round"></span>
-                            </label></div>
-							<!--Credit Application-->
-							<h4>Did you apply a Loss of service credit?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've applied the relevant loss of service credit on the customers account"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Above actor role&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've sent a credit request to my team leader as it is above my actor role"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Credit not required&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="no credit is required to be applied as of now"><span class="slider round"></span>
-                            </label></div>
-						</div>
-
-					</div>
-					<!--ADSL/FIBRE steps. feeds into text area on selection.-->
-
-					<div id="ADSL1">
-						<FORM id=FormADSL method=get name=FormName action=blah.php>
-							<!--Account holder question-->
-							<div class="accntholder">
-								<h3>Account Holder or Password Holder?</h3>
-								<div class="sliderWrapper">
-									<div>Account holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Account holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
-								<div class="sliderWrapper">
-									<div>Password holder&nbsp;&nbsp;</div>
-									<label class="switch">
-                            <input type="checkbox" class="notes" value="Password holder called in"> <span class="slider round"></span>
-                            </label>
-								</div>
+									<input type="checkbox" class="notes"
+										value="to cancel their sky store purchase/buy & keep purchase"><span
+										class="slider round"></span>
+								</label>
 							</div>
-							<!--technical Issues-->
-							<h4>Issues With Service</h4>
 							<div class="sliderWrapper">
-								<div>Intermittent broadband&nbsp;&nbsp;
-								</div>
+								<div>On Demand connector not working&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="advising they were experiencing an intermittent broadband service"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="has an issue with their onDem& connector"><span
+										class="slider round"></span>
+								</label>
+							</div>
+							<br>
+							<button type="button" class="btn btn-default" onclick="troubleShootingHD()"
+								id="troubleShootingHD4">Troubleshooting Steps</button>
+
+						</div>
+					</form>
+					<!--End of equipment/hardware issues-->
+					<br>
+					<!--SKY +HD troubleshooting steps hidden until clicked & hidden within Sky HD-->
+					<div id="TROUBLESHOOTHD" style="display:none;">
+						<div class="sliderWrapper">
+							<div>Manual Reboot&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="We performed a power cycle of the Sky box affected"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div> System Reset&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a reset of the Sky box, advised customer they will lose all of their recordings"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Checked dish input cables-Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Checked all dish input cables on the customers equipment & there was no issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Checked dish input cables-Not Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Checked all dish input cables on the customers equipment & there was signs of an issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>The Connection To broadband Is Okay&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="the Sky box is connected to the customers broadband service & there is no issues with it"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Disconnect & Reconnect Network&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="We performed a reset of network settings on the Sky equipment"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Resent Signals & Paired Card&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="All signals have re-sent & the viewing card has been paired, advised up to a 4 hour wait for this to take effect"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Software Download&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a software download on the Sky box"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Planner Rebuild&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a planner rebuild on the affected Sky box. No loss of recordings with this step"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Front Panel Reset&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a front panel reset to try & resolve the issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Reset Network connection&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="we performed a front panel reset to try & resolve the issue"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Replaced viewing card&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've replaced the viewing card for the customer & advised of the turnaround time for this"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--end of troubleshooting steps-->
+
+
+						<!--Resolution steps taken to resolve issues in +HD all feed into texxt area onclick-->
+
+						<h4>Did you Resolve the issue?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Resolved over the phone, no further steps needed"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes" value="Issue wasn't resolved over the phone"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Advised to use Sky Go&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="As a short term resoltion, I explained to the customer that they can use Sky Go to continue viewing their subscription"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--engineer booking-->
+						<h4>Did you book an engineer?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Engineer booked for next available date with the customer"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="No engineer has been booked at this time"><span class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Premium Visit&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Customer is booked in for a premium visit. Advised of charge associated with it"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<h4>Is it an MDU visit?</h4>
+						<div class="sliderWrapper">
+							<div>Yes - updated MDU site also&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Customers service runs off a shared dish, updated the MDU site and booked service call"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - issue resolved&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="No engineer has been booked at this time no need to enter MDU details"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<!--Credit Application-->
+						<h4>Did you apply a Loss of service credit?</h4>
+						<div class="sliderWrapper">
+							<div>Yes&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've applied the relevant loss of service credit on the customers account"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - Above actor role&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've sent a credit request to my team leader as it is above my actor role"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No - Credit not required&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="no credit is required to be applied as of now"><span
+									class="slider round"></span>
+							</label>
+						</div>
+					</div>
+
+				</div>
+				<!--ADSL/FIBRE steps. feeds into text area on selection.-->
+				<div id="ADSL1">
+					<FORM id=FormADSL method=get name=FormName action=blah.php>
+						<!--Account holder question-->
+						<div class="accntholder">
+							<h3>Account Holder or Password Holder?</h3>
 							<div class="sliderWrapper">
-								<div>Failed Order&nbsp;&nbsp;
-								</div>
+								<div>Account holder&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="querying their broadband order, after reviewing their account & order status the order has failed"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes" value="Account holder called in"> <span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>Enquiring about activation date&nbsp;&nbsp;
-								</div>
+								<div>Password holder&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="to check when their services are due to go active, advised of date in orders tab on stan"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes" value="Password holder called in"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<h3>Broadband Essential or Broadband Superfast?</h3>
+							<div class="sliderWrapper">
+								<div>Broadband Essential&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="having issues with their Broadband essential service"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+							<div class="sliderWrapper">
+								<div>Broadband Superfast&nbsp;&nbsp;</div>
+								<label class="switch">
+									<input type="checkbox" class="notes" value="having issues with their Broadband superfast service"> <span
+										class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<!--technical Issues-->
+						<h4>Issues With Service</h4>
+						<button id="techbb" type="button" class="btn btn-default" onclick="adslbroadband()">Technical
+							issues</button>
+						<button id="ordersbb" type="button" class="btn btn-default"
+							onclick="adslbroadband()">Orders/provisioning</button>
+							
+							
+							</div>
+
+						<div id="bbtech" style="display:none;">
+							
+							<div class="sliderWrapper">
+									<div>Intermittent broadband&nbsp;&nbsp;
+									</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="advising they were experiencing an intermittent broadband service"><span
+											class="slider round"></span>
+									</label>
+								</div>
 							<div class="sliderWrapper">
 								<div>Slow Speeds Wireless&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with slow speeds"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes" value="with slow speeds"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Slow wired speeds&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with slow wired speeds on their device"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with slow wired speeds on their device"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Slow wireless speeds&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="is experiencing slow wireless speeds"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="is experiencing slow wireless speeds"><span class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Can't browse wirelessly on some devices&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="as they can connect to their broadband service on some of their devices at home wirelessly, but not all"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="as they can connect to their broadband service on some of their devices at home wirelessly, but not all"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>Weak Wireless Signal/Wireless Speed Drops&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with a weak signal & broadband dropping in & out"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with a weak signal & broadband dropping in & out"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>Can't view any networks & can't connect wirelessly to Sky Hub on some devices&nbsp;&nbsp;
+								<div>Can't view any networks & can't connect wirelessly to Sky Hub on some
+									devices&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="as their device isn't showing the Sky network & can't connect to their service"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="as their device isn't showing the Sky network & can't connect to their service"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
 								<div>In Sync No Connection&nbsp;&nbsp;
 								</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with their router displaying green lights & all tests showing fine in the NOG, but can't browse the internet"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="with their router displaying green lights & all tests showing fine in the NOG, but can't browse the internet"><span
+										class="slider round"></span>
+								</label>
+							</div>
+						<div class="sliderWrapper">
+							<div>Can't browse specific websites on all devices&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="with their broab& working, however they can't browse specific websites on all of their devices"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>No Sync&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="with their router displaying no internet light/flashing amber internet light/solid amber light resulting in no sync"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Can't browse wirelessly on all devices&nbsp;&nbsp;
+							</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="as they have a working phone & wired broadband service but cannot get a wireless connection or browse on any device (wireless & internet light stay on)"><span
+									class="slider round"></span>
+							</label>
+						</div>
+				</div>
+				<div id="provbb" style="display:none;">
+				<div class="sliderWrapper">
+					<div>Failed Order&nbsp;&nbsp;
+					</div>
+					<label class="switch">
+						<input type="checkbox" class="notes"
+							value="querying their broadband order, after reviewing their account & order status the order has failed"><span
+							class="slider round"></span>
+					</label>
+				</div>
+				<div class="sliderWrapper">
+					<div>Enquiring about activation date&nbsp;&nbsp;
+					</div>
+					<label class="switch">
+						<input type="checkbox" class="notes"
+							value="to check when their services are due to go active, advised of date in orders tab on stan"><span
+							class="slider round"></span>
+					</label>
+				</div>
+				<div class="sliderWrapper">
+						<div>Delayed order&nbsp;&nbsp;
+						</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="their order is currently delayed"><span
+								class="slider round"></span>
+						</label>
+					</div>
+			</div>
+				</FORM>
+				<!--End of Technical issues-->
+				<br>
+				<!--Troubleshooting steps broadband-->
+				<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="bbtechtrbl" style="display:none;">Steps to resolve tech issue</button>		
+				<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="bbordertbsht" style="display:none;">Steps to resolve order issue</button>
+						
+					<!--order troubleshooting button-->
+						<div id="ordertbl" style="display:none;">
+								<div class="sliderWrapper">
+										<div>Replaced order&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes"
+												value="I have now replaced the customer order & advised of SLA regarding it going active"><span
+												class="slider round"></span>
+										</label>
+									</div>
+									<div class="sliderWrapper">
+										<div>Unable to replace order - broadband not available&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes"
+												value="We are unable to replace the order due to broadband not being available on the customers line"><span
+												class="slider round"></span>
+										</label>
+									</div>
+									<div class="sliderWrapper">
+											<div>Resubmitted LE&nbsp;&nbsp;</div>
+											<label class="switch">
+												<input type="checkbox" class="notes"
+													value="required to re-submit the failed LE"><span
+													class="slider round"></span>
+											</label>
+										</div>
+										<br>
+										<br>
+										<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+					id="broadbandTrouble">Troubleshooting Steps</button>
+					</div>
+					
+					<!--Tech Troubleshooting steps-->
+					<div id="tchtrblshoot" style="display:none;">
 							<div class="sliderWrapper">
-								<div>Can't browse specific websites on all devices&nbsp;&nbsp;
-								</div>
+							<div>Replaced router-in warranty&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've replaced the customers broadband router & its in warranty, no charge to the customer"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Replaced router-charged customer&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="I've replaced the customers broadband router with a charge to the customer"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+								<div>Profile change by tier2-lowered&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with their broab& working, however they can't browse specific websites on all of their devices"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="I rang through to tier2 & they have dropped the profile to try & resolve the issue"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>No Sync&nbsp;&nbsp;
-								</div>
+								<div>Profile change by tier2-raised&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="with their router displaying no internet light/flashing amber internet light/solid amber light resulting in no sync"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't browse or connect wirelessly&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they can connect to their broadband service but can't browse over a wireless connection"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't find the sky network on their devices&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value=""><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't connect to the sky router on all devices wirelessly&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they can't connect to their sky router on all of their devices"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't browse online with a wired connection&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they can't browse or connect to their internet service with a wired connection"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't use phone & broadband at the same time&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they can’t use phone/the call drops when broadband is in use, or the broadband connection drops when a call is made"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Can't browse wirelessly on all devices&nbsp;&nbsp;
-								</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they have a working phone & wired broadband service but cannot get a wireless connection or browse on any device (wireless & internet light stay on)"><span class="slider round"></span>
-                            </label></div>
-						</FORM>
-						<!--End of Technical issues-->
-						<br>
-
-						<!--Troubleshooting steps broadband-->
-						<button type="button" class="btn btn-default" onclick="troubleShootingBB()" id="broadbandTrouble">Troubleshooting Steps</button>
-						<div id="TROUBLESHOOTBB">
-							<div class="sliderWrapper">
-								<div>Replaced router-in warranty&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've replaced the customers broadband router & its in warranty, no charge to the customer"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Replaced router-No charge out of warranty&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've sent the customer account details to my lead to replace the router with no charge"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Replaced router-charged customer&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've replaced the customers broadband router with a charge to the customer"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked & correct the internal setup&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we ran through the customers internal set up & it appears to be set up correctly, no issue found with it"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Replaced order&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I have now replaced the customer order & advised of SLA regarding it going active"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Unable to replace order- order on the line&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We are unable to replace the order due to an existing order on the line"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Unable to replace order - broadband not available&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We are unable to replace the order due to broadband not being available on the customers line"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked & incorrect the internal setup&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we ran through the customers internal set up & it appears to be set up incorrectly"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Profile change by tier2-Lowered&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I rang through to tier2 & they have dropped the profile to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Profile change by tier2-Higherd&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I rang through to tier2 & they have raised the profile to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Advised to get three wired speedtests&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="advised the customer to get three wired speedtest examples & to call back in"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Customer has a phone fault&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We have identified a phone fault on the customers line, further troubleshooting taken for their phone service"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Customers phone is working fine&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customers phone line is working fine & there are no faults on this part of the service at present"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reset the Hub&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We performed a master reset of the customer router"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Ran TTL/TLC&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I performed a TTL/TLC to check the customer voltage on their line to try identify a fault"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Ran a sync test in the NOG&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I performed a sync test on the customer line to determine the possible cause with their broadband"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Removed everything from all phone sockets in the house&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We removed everything from the phone sockets & re-connected everything one by one to determine if it was something internal causing the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No forecast for fault to be resolved&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="currently there is no forecast in place for the fault to be resolved due to planning permision from the council"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>broadband router is plugged into the master socket&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customers router is correctly set up in the master socket"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
+									<input type="checkbox" class="notes"
+										value="I rang through to tier2 & they have raised the profile to try & resolve the issue"><span
+										class="slider round"></span>
+								</label>
+							</div>
+								<div class="sliderWrapper">
+										<div>Checked & correct the internal setup&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes"
+												value="we ran through the customers internal set up & it appears to be set up correctly, no issue found with it"><span
+												class="slider round"></span>
+										</label>
+									</div>
+									
+									<div class="sliderWrapper">
+										<div>Checked & incorrect the internal setup&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes"
+												value="we ran through the customers internal set up & it appears to be set up incorrectly"><span
+												class="slider round"></span>
+										</label>
+									</div>
+									<div class="sliderWrapper">
+											<div>Reset the Hub&nbsp;&nbsp;</div>
+											<label class="switch">
+												<input type="checkbox" class="notes"
+													value="We performed a master reset of the customer router"><span
+													class="slider round"></span>
+											</label>
+										</div>
+										
+					<div class="sliderWrapper">
+							<div>Customer has a phone fault&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="We have identified a phone fault on the customers line, further troubleshooting taken for their phone service"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
+							<div>Customers phone is working fine&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Customers phone line is working fine & there are no faults on this part of the service at present"><span
+									class="slider round"></span>
+							</label>
+						</div>
+						<div class="sliderWrapper">
 								<div>broadband router was not plugged into the master socket&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer router wasn't set up in their master socket, advised its required to be"><span class="slider round"></span>
-                            </label></div>
+									<input type="checkbox" class="notes"
+										value="Customer router wasn't set up in their master socket, advised its required to be"><span
+										class="slider round"></span>
+								</label>
+							</div>
 							<div class="sliderWrapper">
-								<div>Disabled the wireless function on the Sky Hub&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We disabled the wireless function from the sky router to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>wired speed test&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We ran a wired speed test on the customer device, the result was XXXX"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Called tier2 for support&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I rang tier2 floor support for assitance, reference floor support note for advice given & next steps"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reset the customer browser&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We ran through resetting the customers browser that they use"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Disabled the firewall&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We disabled the customers firewall, made them aware that their network is now open & can be at risk of viruses"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Re-enable the firewall&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We re-enabled the customers firewall"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Monitor the speeds for 24 hours&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I advised the customer to monitor their internet speed/connectivity for the next 24 hours & if it does not improve to call us back in to log a fault/continue troubleshooting"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Re-enable the wireless function on the Sky Hub&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We re-enabled the wireless function on the customer router"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked Sky Q boosters&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We checked to make sure the customers Q booster was working"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked comm& prompt for an unused wireless channel&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We ran through the comm& prompt tool on the customers laptop to check what wireless channels are free"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Changed the wireless channel on your Sky Hub&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We accessed the customer router page & ran through the wireless channels to resolve the wireless issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Remove the saved network on your device&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We removed the sky network as a saved network to re-connect the device"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Update customer devices & seek device support&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Advised the customer to update their device & contact the manufactorer for support on their issue as its a device issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Start auto-wireless IP on the customers device&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="We changed the customers device to run auto wireless IP"><span class="slider round"></span>
-                            </label></div>
-							<!--End of troubleshooting steps-->
-							<br>
-							<!--resolution-->
-							<h4>Did you Resolve the issue?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="issue resolved over the phone no further steps required"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="No, further troubleshooting steps required with the customer"><span class="slider round"></span>
-                            </label></div>
-
-							<!--Fault option-->
-							<h4>Did You Need To Log The Fault?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Logged fault for the customer for the issue outlined in the notes, advised of SLA & rang tier2 to log the fault"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="No fault logged at this time"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Customer unable to troubleshoot anymore, more troubleshooting steps needed&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer couldn't troubleshoot anymore so advised to call back in to continue troubleshooting to try & resolve the issue"><span class="slider round"></span>
-                            </label></div>
-							<!--Credit Application-->
-							<h4>Did you apply a Loss of service credit?</h4>
-							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've applied the relevant loss of service credit on the customers account"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Above actor role&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="I've sent a credit request to my team leader as it is above my actor role"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>No - Credit not required&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="no credit is required to be applied as of now"><span class="slider round"></span>
-                            </label></div>
-							<hr>
-						</div>
+									<div>wired speed test&nbsp;&nbsp;</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="We ran a wired speed test on the customer device, the result was XXXX"><span
+											class="slider round"></span>
+									</label>
+								</div><!--remove for agents in uk-->
+								<div class="sliderWrapper">
+									<div>Reset the customers browser&nbsp;&nbsp;</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="We ran through resetting the customers browser that they use"><span
+											class="slider round"></span>
+									</label>
+								</div>
+								<div class="sliderWrapper">
+									<div>Disabled the firewall&nbsp;&nbsp;</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="We disabled the customers firewall, made them aware that their network is now open & can be at risk of viruses"><span
+											class="slider round"></span>
+									</label>
+								</div>	
+								<div class="sliderWrapper">
+									<div>Changed the wireless channel on customers Sky Hub&nbsp;&nbsp;</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="We accessed the customer router page & ran through the wireless channels to resolve the wireless issue"><span
+											class="slider round"></span>
+									</label>
+								</div>
+								<div class="sliderWrapper">
+									<div>Remove the saved network on your device&nbsp;&nbsp;</div>
+									<label class="switch">
+										<input type="checkbox" class="notes"
+											value="We removed the sky network as a saved network to re-connect the device"><span
+											class="slider round"></span>
+									</label>
+								</div>
+								<br><br>
+								<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+					id="broadbandTrouble2">Resolution outcome</button>
 
 					</div>
+					<!--End of troubleshooting steps-->
+					<br>
+					<!--resolution-->
+					<div id="TROUBLESHOOTBB" style="display:none;">
+					<h4>Did you Resolve the issue?</h4>
+					<div class="sliderWrapper">
+						<div>Yes&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="issue resolved over the phone no further steps required"><span
+								class="slider round"></span>
+						</label>
+					</div>
+					<div class="sliderWrapper">
+						<div>No&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="No, further troubleshooting steps required with the customer"><span
+								class="slider round"></span>
+						</label>
+					</div>
 
-					<!--Fibre To The Home-->
-					<div id="FTTH1">
+					<!--Fault option-->
+					<h4>Did You Need To Log The Fault?</h4>
+					<div class="sliderWrapper">
+						<div>Yes - Fav&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="Logged fault for the customer for the issue outlined in the notes, advised of SLA and fault logged through FAV and 25£ missed appointment charge"><span
+								class="slider round"></span>
+						</label>
+					</div>
+					<div class="sliderWrapper">
+							<div>Yes - Fav/Chargeable vist booked(Open-Reach)&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Logged fault for the customer and it's a chargeable visit, advised of charge applicable and fault logged through FAV"><span
+									class="slider round"></span>
+							</label>
+						</div>
+					<div class="sliderWrapper">
+							<div>Yes - override required- Fav&nbsp;&nbsp;</div>
+							<label class="switch">
+								<input type="checkbox" class="notes"
+									value="Logged fault for the customer for the issue outlined in the notes, advised of SLA and fault logged through overriding in FAV"><span
+									class="slider round"></span>
+							</label>
+						</div>
+					<div class="sliderWrapper">
+						<div>No&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes" value="No fault logged at this time"><span
+								class="slider round"></span>
+						</label>
+					</div>
+
+					<!--Credit Application-->
+					<h4>Did you apply a Loss of service credit?</h4>
+					<div class="sliderWrapper">
+						<div>Yes&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="I've applied the relevant loss of service credit on the customers account"><span
+								class="slider round"></span>
+						</label>
+					</div>
+					<div class="sliderWrapper">
+						<div>No - Above actor role&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="I've sent a credit request to my team leader as it is above my actor role"><span
+								class="slider round"></span>
+						</label>
+					</div>
+					<div class="sliderWrapper">
+						<div>No - Credit not required&nbsp;&nbsp;</div>
+						<label class="switch">
+							<input type="checkbox" class="notes"
+								value="no credit is required to be applied as of now"><span class="slider round"></span>
+						</label>
+					</div>
+					<hr>
+				</div>
+
+			
+
+			<!--Fibre To The Home-->
+			<div id="FTTH1">
 						<FORM id=FormFTTH method=get name=FormName action=blah.php>
 							<!--ACcount holder Question-->
 							<div class="accntholder">
@@ -992,7 +1449,7 @@
 						</FORM>
 
 						<!--FTTH troubleshooting steps-->
-						<button type="button" class="btn btn-default" onclick="troubleShootingFFTH()" id="trubleShootFTTH">Troubleshooting Steps</button>
+						<button type="button" class="btn btn-default" onclick="troubleShootingFFTH()" id="trubleShootFTTH">Steps to resolve issue</button>
 						<div id="TROUBLESHOOTFFTH">
 							<div class="sliderWrapper">
 								<div>Checked Lights On ONT&nbsp;&nbsp;</div>
@@ -1081,7 +1538,7 @@
                             </label></div>
 							<!--end of troubleshooting steps-->
 
-							<!--Resolution-->
+			<!--Resolution-->
 							<h4>Did you Resolve the issue?</h4>
 							<div class="sliderWrapper">
 								<div>Yes&nbsp;&nbsp;</div>
@@ -1257,14 +1714,61 @@
                             </label></div>
 
 						</FORM>
+						<br>
 						<!--Talk troubleshooting steps-->
 						<button type="button" class="btn btn-default" onclick="troubleShootingTalk()" id="troubleShootingTalk">Troubleshooting Steps</button>
 						<div id="TROUBLESHOOTTalk">
+								<button type="button" class="btn btn-default" onclick="troubleShootingTalk()" id="internalphn">Internal checks</button>
+								<button type="button" class="btn btn-default" onclick="troubleShootingTalk()" id="systemphn">System checks</button>
+								<!--internal checks-->
+							<div id="intrnsteps" style="display:none;">
+							
 							<div class="sliderWrapper">
-								<div>Customers h&set is compatible with call feature&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the h&set is compatible to support this call feature"><span class="slider round"></span>
-                            </label></div>
+									<div>Removed everything from all phone sockets/plugged them back in&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="we removed all of their devices from every phone socket & reconnected each device until we found what is causing the issue"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+										<div>Checked internal set up-Correct&nbsp;&nbsp;</div>
+										<label class="switch">
+									<input type="checkbox" class="notes" value="Customers internal set up is correct & not the issue"><span class="slider round"></span>
+									</label></div>
+									<div class="sliderWrapper">
+										<div>Checked internal set up-Incorrect&nbsp;&nbsp;</div>
+										<label class="switch">
+									<input type="checkbox" class="notes" value="Customer internal set up was incorrect, we fixed this issue"><span class="slider round"></span>
+									</label></div>
+									<div class="sliderWrapper">
+										<div>Second handset was checked&nbsp;&nbsp;</div>
+										<label class="switch">
+									<input type="checkbox" class="notes" value="The customer has checked a second h&set"><span class="slider round"></span>
+									</label></div>
+									<div class="sliderWrapper">
+										<div>Second handset not checked&nbsp;&nbsp;</div>
+										<label class="switch">
+									<input type="checkbox" class="notes" value="Customer doesn't have a second h&set to check"><span class="slider round"></span>
+									</label></div>
+									<div class="sliderWrapper">
+											<div>Services never worked before&nbsp;&nbsp;</div>
+											<label class="switch">
+										<input type="checkbox" class="notes" value="the customer's services have never worked before"><span class="slider round"></span>
+										</label></div>
+										<button type="button" class="btn btn-default" onclick="troubleShootingTalk()" id="troubleShootingTalkbtn">Resolution Steps</button>
+
+								</div><!--end of internal checks-->
+								<!--system checks-->
+								<div id="syscheck" style="display:none;">
+								<h4>System checks - Stan</h4>
+								<div class="sliderWrapper">
+										<div>Ran line test in FAV to establish if there is an external fault&nbsp;&nbsp;</div>
+										<label class="switch">
+									<input type="checkbox" class="notes" value="I've ran a test on FAV to establish if there is a fault on the customers line"><span class="slider round"></span>
+									</label></div>
+									<div class="sliderWrapper">
+											<div>FAV identified there is a fault&nbsp;&nbsp;</div>
+											<label class="switch">
+										<input type="checkbox" class="notes" value="FAV has identified a fault with the customers service"><span class="slider round"></span>
+										</label></div>
 							<div class="sliderWrapper">
 								<div>Removed call feature&nbsp;&nbsp;</div>
 								<label class="switch">
@@ -1284,63 +1788,28 @@
 								<div>Took examples of numbers affected&nbsp;&nbsp;</div>
 								<label class="switch">
 							<input type="checkbox" class="notes" value="I got the numbers that the customer couldn't call/recieve a call from"><span class="slider round"></span>
-                            </label></div>
+							</label></div>
 							<div class="sliderWrapper">
-								<div>Checked internal set up-Correct&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customers internal set up is correct & not the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Checked internal set up-Incorrect&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer internal set up was incorrect, we fixed this issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Master socket is being used&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="customers device is in the master socket"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Master socket is not being used&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="customers device was not being used in the master socket, advised it needs to be as we only provide to it"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Second h&set was checked&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="The customer has checked a second h&set"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Second h&set not checked&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customer doesn't have a second h&set to check"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>broadband isn't affected&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customers broadband is working fine & no issue found from phone fault"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>broadband is affected&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Customers broadband isn't working as a potential result from the phone fault"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Removed everything from all phone sockets/plugged them back in&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="we removed all of their devices from every phone socket & reconnected each device until we found what is causing the issue"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Service has always been working up until now&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the customer's phone services have been working up until now"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Services never worked before&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="the customer's services have never worked before"><span class="slider round"></span>
-                            </label></div>
+									<div>broadband isn't affected&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="Customers broadband is working fine & no issue found from phone fault"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>broadband is affected&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="Customers broadband isn't working as a potential result from the phone fault"><span class="slider round"></span>
+								</label></div>
+								<button type="button" class="btn btn-default" onclick="troubleShootingTalk()" id="troubleShootingTalkbtn">Resolution Steps</button>
+
+						</div><!--end of system checks-->
+						
+							
+							
+							
+							
+							
 							<!--resolution steps-->
+							<div id="resolutiontlk" style="display:none;">
 							<h4>Did you Resolve the issue?</h4>
 							<div class="sliderWrapper">
 								<div>Yes&nbsp;&nbsp;</div>
@@ -1355,19 +1824,19 @@
 							<!--fault for talk-->
 							<h4>Did you log a fault?</h4>
 							<div class="sliderWrapper">
-								<div>Yes&nbsp;&nbsp;</div>
+								<div>Yes - FAV&nbsp;&nbsp;</div>
 								<label class="switch">
-							<input type="checkbox" class="notes" value="filled in TTM template with customer over the phone & logged fault with Tech & Provisioning, advised customer of relevant SLA for their fault"><span class="slider round"></span>
-                            </label></div>
+							<input type="checkbox" class="notes" value="I've ran all relevant tests through FAV and it has identified there is a fault, fault logged through FAV and advised of SLA"><span class="slider round"></span>
+							</label></div>
+							<div class="sliderWrapper">
+									<div>Yes - FAV, override&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="I've ran all relevant tests through FAV and it has identified there is no fault, fault logged through FAV by override and advised of SLA"><span class="slider round"></span>
+								</label></div>
 							<div class="sliderWrapper">
 								<div>No&nbsp;&nbsp;</div>
 								<label class="switch">
 							<input type="checkbox" class="notes" value="No fault has been booked at this time."><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Fault Went Straight To BTI&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Logged Fault for customer & it went straight to BTI. Advised of SLA"><span class="slider round"></span>
                             </label></div>
 							<div class="sliderWrapper">
 								<div>FP booked&nbsp;&nbsp;</div>
@@ -1393,9 +1862,68 @@
                             </label></div>
 							<hr>
 						</div>
+					</div>
 
 					</div>
+					<!--BBTTE order options-->
+					<div id="bbtteapp" style="display:none;">
+							<div class="accntholder">
+									<h3>Account Holder or Password Holder?</h3>
+									<div class="sliderWrapper">
+										<div>Account holder&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes" value="Account holder called in"> <span
+												class="slider round"></span>
+										</label>
+									</div>
+									<div class="sliderWrapper">
+										<div>Password holder&nbsp;&nbsp;</div>
+										<label class="switch">
+											<input type="checkbox" class="notes" value="Password holder called in"> <span
+												class="slider round"></span>
+										</label>
+									</div>
+								</div>
+								<h4>Customer query relating to their appointment</h4>
+									<div class="sliderWrapper">
+											<div>Missed BBTTE appointment&nbsp;&nbsp;
+											</div>
+											<label class="switch">
+												<input type="checkbox" class="notes"
+													value="advising they have missed their booked appointment for their fault"><span
+													class="slider round"></span>
+											</label>
+										</div>
+										<div class="sliderWrapper">
+												<div>Rearrange BBTTE appointment&nbsp;&nbsp;
+												</div>
+												<label class="switch">
+													<input type="checkbox" class="notes"
+														value="advising they need too reschedule their booked appointment for their fault"><span
+														class="slider round"></span>
+												</label>
+											</div>
+											<div class="sliderWrapper">
+													<div>Cancel BBTTE appointment&nbsp;&nbsp;
+													</div>
+													<label class="switch">
+														<input type="checkbox" class="notes"
+															value="advising they need too cancel their booked appointment for their fault"><span
+															class="slider round"></span>
+													</label>
+												</div>
+												<div class="sliderWrapper">
+														<div>Confirm Date & Time for BBTTE appointment&nbsp;&nbsp;
+														</div>
+														<label class="switch">
+															<input type="checkbox" class="notes"
+																value="advising they have missed their booked appointment for their fault"><span
+																class="slider round"></span>
+														</label>
+													</div>
+												</div>
 					<!--billing issues & resolution-->
+			<!--billing-->
 					<div id="BILLING1">
 						<FORM id=FormBilling method=get name=FormName action=blah.php>
 							<!--Account Holder Information-->
@@ -1415,85 +1943,101 @@
 								</div>
 							</div>
 							<!--Issues-->
-							<h4>Issues With Service</h4>
-							<div class="sliderWrapper">
-								<div>Query Contract End Date&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to query when their contract is due to end"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Pay a bill&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to make a payment on their billing account"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reinstate account&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="took  payment to have the account reinstated"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Reinstate account-not  payment&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="Took a partial payment & had their services switched back on"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Billing Query - cost of bill&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to query the cost of their bill as it was higher than they expected"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Billing Query - Pro rota first bill&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to query the cost of their bill as it was higher than they expected, this was due to a pro rota on their bill"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Billing Payment Issue - no issues in stan&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to say that their Bank AC is showing unpaid Sky bill. I've Checked on our system & all is Okay, with no unpaid bill.Customer will call his bank"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Payment not showing up in financial history&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they have been charged by sky however the payments don't match on their account, case escelated to the relevant department via CRF"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Change bank details - before statement is generated&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they need to change their payment method, changed their payment method & advised will be changed in time for their next bill"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Change bank details - after statement is generated&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they need to change their payment method, changed their payment method advised customer this will not take place in their next bill"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Didn't want to change their bank details within statement&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to advise they will change their bank details when a statement isn't generated so it comes out of their billing properly"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Set back up bank details&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="to set back up their payment method"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Customer looking for a refund&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they are requesting to have a refund processed"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>ETC - TV/HD/MS&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as they have recieved early termination charges on their account"><span class="slider round"></span>
-                            </label></div>
-							<div class="sliderWrapper">
-								<div>Offer not applied&nbsp;&nbsp;</div>
-								<label class="switch">
-							<input type="checkbox" class="notes" value="as their offer has not been applied to their account"><span class="slider round"></span>
-                            </label></div>
+							<h4>Billing scenarios</h4>
+							<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="billpymt">Payment issues/queries with payments</button>
+						<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="billqry">General billing questions</button>
+
+							<div id="blllpayment" style="display:none;">
+								<div class="sliderWrapper">
+									<div>Reinstate account&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="took  payment to have the account reinstated"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Reinstate account- partial payment&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="Took a partial payment & had their services switched back on"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Pay a bill&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to make a payment on their billing account"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Customer looking for a refund&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as they are requesting to have a refund processed"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Billing Payment Issue - no issues in stan&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to say that their Bank AC is showing unpaid Sky bill. I've Checked on our system & all is Okay, with no unpaid bill.Customer will call his bank"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Payment not showing up in financial history&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as they have been charged by sky however the payments don't match on their account, case escelated to the relevant department via CRF"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Change bank details - before statement is generated&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as they need to change their payment method, changed their payment method & advised will be changed in time for their next bill"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Change bank details - after statement is generated&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as they need to change their payment method, changed their payment method advised customer this will not take place in their next bill"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Didn't want to change their bank details within statement&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to advise they will change their bank details when a statement isn't generated so it comes out of their billing properly"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Set back up bank details&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to set back up their payment method"><span class="slider round"></span>
+								</label></div>
+								<br>
+								<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="billrslv">Resolution steps</button>
+								
+							</div>
+							<div id="billquery" style="display:none;">
+								<div class="sliderWrapper">
+									<div>Billing Query - cost of bill&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to query the cost of their bill as it was higher than they expected"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Billing Query - Pro rota first bill&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="to query the cost of their bill as it was higher than they expected, this was due to a pro rota on their bill"><span class="slider round"></span>
+								</label></div>
+								
+								
+								<div class="sliderWrapper">
+									<div>ETC - TV/HD/MS&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as they have recieved early termination charges on their account"><span class="slider round"></span>
+								</label></div>
+								<div class="sliderWrapper">
+									<div>Offer not applied&nbsp;&nbsp;</div>
+									<label class="switch">
+								<input type="checkbox" class="notes" value="as their offer has not been applied to their account"><span class="slider round"></span>
+								</label></div>
+								<br>
+								<button type="button" class="btn btn-default" onclick="troubleShootingBB()"
+						id="billrslv">Resolution steps</button>
+							
+							</div>
 
 						</FORM>
+						
 						<!--resolution steps-->
+						<div id="rslvbilling" style="display:none;">
 						<h4>Did you take a payment?</h4>
 						<div class="sliderWrapper">
 							<div> payment taken&nbsp;&nbsp;</div>
@@ -1520,16 +2064,6 @@
 							<div>No&nbsp;&nbsp;</div>
 							<label class="switch">
 							<input type="checkbox" class="notes" value="customers account could not be reinstated at this time"><span class="slider round"></span>
-                            </label></div>
-						<div class="sliderWrapper">
-							<div>No - not restricted/blocked&nbsp;&nbsp;</div>
-							<label class="switch">
-							<input type="checkbox" class="notes" value="customers account was not restricted/active block so no need to reinstate their subscription"><span class="slider round"></span>
-                            </label></div>
-						<div class="sliderWrapper">
-							<div>Sent to lead to reinstate&nbsp;&nbsp;</div>
-							<label class="switch">
-							<input type="checkbox" class="notes" value="I sent the customers account to my team lead to reinstate the account after a partial payment/no payment as agreed"><span class="slider round"></span>
                             </label></div>
 						<div class="sliderWrapper">
 							<div>Sent to lead to have offer applied&nbsp;&nbsp;</div>
@@ -1572,7 +2106,8 @@
 							<div>No - Credit not required&nbsp;&nbsp;</div>
 							<label class="switch">
 							<input type="checkbox" class="notes" value="no credit is required to be applied as of now"><span class="slider round"></span>
-                            </label></div>
+							</label></div>
+						</div>
 
 						<!--Cancellation/downgrade requests-->
 						<br>
@@ -1679,7 +2214,9 @@
 					</div>
 
 						<!--Upgrade choices-->
-					<div id="UPGRADE1">
+
+			<!--Upograde-->
+						<div id="UPGRADE1">
 						<FORM id=FormUpgrade method=get name=FormName action=blah.php>
 							<div class="accntholder">
 								<h3>Account Holder or Password Holder?</h3>
@@ -2063,7 +2600,7 @@
 							<input type="checkbox" class="notes" value="the  HD-Legacy subscription at the offered price at this time"><span class="slider round"></span>
                             </label></div>
 						<div class="sliderWrapper">
-							<div>HD-st&alone&nbsp;&nbsp;</div>
+							<div>HD-standalone&nbsp;&nbsp;</div>
 							<label class="switch">
 							<input type="checkbox" class="notes" value="the HD st&alone product as part of the entertainment bundle at the offered price at this time"><span class="slider round"></span>
                             </label></div>
@@ -2119,25 +2656,26 @@
 					<div id="productsupgrade" style="display:none;">
 						<!--hidden div in button-->
 						<div class="sliderWrapper">
-							<div>ADSL Broadb&&nbsp;&nbsp;</div>
+							<div>Broadband essential&nbsp;&nbsp;</div>
 							<label class="switch">
-							<input type="checkbox" class="notes" value="have our ADSL broadb& service on their account at the offered price at this time"><span class="slider round"></span>
-                            </label></div>
+							<input type="checkbox" class="notes" value="have our broadband essential service on their account at the offered price at this time"><span class="slider round"></span>
+							</label></div>
+							<div class="sliderWrapper">
+								<div>Broadband superfast&nbsp;&nbsp;</div>
+								<label class="switch">
+								<input type="checkbox" class="notes" value="have our Broadband superfast service on their account at the offered price at this time"><span class="slider round"></span>
+								</label></div>
+							<div class="sliderWrapper">
+								<div>Broadband Ultrafast&nbsp;&nbsp;</div>
+								<label class="switch">
+								<input type="checkbox" class="notes" value="have our ultrafast broadband service on their account at the offered price at this time"><span class="slider round"></span>
+								</label></div>
 						<div class="sliderWrapper">
 							<div>LE submitted&nbsp;&nbsp;</div>
 							<label class="switch">
 							<input type="checkbox" class="notes" value="I've had to submit an LE for the customer, advised I will contact the customer back once this is complete"><span class="slider round"></span>
                             </label></div>
-						<div class="sliderWrapper">
-							<div>Fibre Broadb&&nbsp;&nbsp;</div>
-							<label class="switch">
-							<input type="checkbox" class="notes" value="have our Fibre broadb& service on their account at the offered price at this time"><span class="slider round"></span>
-                            </label></div>
-						<div class="sliderWrapper">
-							<div>FTTH&nbsp;&nbsp;</div>
-							<label class="switch">
-							<input type="checkbox" class="notes" value="have our FTTH broadb& service on their account at the offered price at this time"><span class="slider round"></span>
-                            </label></div>
+						
 						<div class="sliderWrapper">
 							<div>VOIP&nbsp;&nbsp;</div>
 							<label class="switch">
@@ -2186,7 +2724,7 @@
                             </label></div>
 					</div>
 					<!--end of div with butotn-->
-					<!--More questions-->
+			<!--More questions-->
 
 
 					</FORM>
@@ -2328,14 +2866,14 @@
 
 						</FORM>
 					</div>
-				</div>
-			</div>
-
+				
 			<!--<textarea id="selectedtext" placeholder="Selected Checkbox" style="display;none;"></textarea><br>-->
 			<!-- Button trigger modal -->
-			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal" data-target="#myModal">Generate</button>
+			<button id="generatebtn" class="btn btn-primary btn-lg launch-modal" data-toggle="modal"
+				data-target="#myModal">Generate</button>
 		</div>
-		</div>
+	</div>
+
 		<footer>
 			<p>&copy; Colm Callan, Email: colm.callan@sky.ie
 				<p>
@@ -2343,7 +2881,8 @@
 	</article>
 	<section>
 		<!-- Modal Generates notes template -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -2366,25 +2905,34 @@
 		<!-- /.modal note generator-->
 
 		<!-- Modal instructions -->
-		<div class="modal fade" id="myInstructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="myInstructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel" style="center">MHR Note Generator</h4>
+						<h4 class="modal-title" id="myModalLabel">MHR Note Generator</h4>
 					</div>
 					<div class="modal-body">
-						<h5>By selecting each option applicable, a note will generate for you when you hit the generate button.</h5>
+						<h5>By selecting each option applicable, a note will generate for you when you hit the generate
+							button.</h5>
 
 						<ul>
-							<li>Sky Q has all technical issues relating to Sky Q & troubleshooting steps completed with resolution choices also</li><br>
-							<li>Sky+HD/Sky+ has all technical issues relating to Sky+HD/Sky+ & troubleshooting steps completed with resolution choices also</li><br>
-							<li>ADSL/Fibre Broadn& has all technical issues relating to ADSL/Fibre broadband & troubleshooting steps completed with resolution choices also</li><br>
-							<li>FTTH has all technical issues relating to FTTH & troubleshooting steps completed with resolution choices also</li><br>
-							<li>Talk has all technical issues relating to Sky talk & troubleshooting steps completed with resolution choices also</li><br>
-							<li>Billing hosts all billing scenarios from general enquiries, payments to cancellation/downgrade requests & transfer to other departments</li><br>
+							<li>Sky Q has all technical issues relating to Sky Q & troubleshooting steps completed with
+								resolution choices also</li><br>
+							<li>Sky+HD/Sky+ has all technical issues relating to Sky+HD/Sky+ & troubleshooting steps
+								completed with resolution choices also</li><br>
+							<li>ADSL/Fibre Broadnand has all technical issues relating to ADSL/Fibre broadband &
+								troubleshooting steps completed with resolution choices also</li><br>
+							<li>FTTH has all technical issues relating to FTTH & troubleshooting steps completed with
+								resolution choices also</li><br>
+							<li>Talk has all technical issues relating to Sky talk & troubleshooting steps completed
+								with resolution choices also</li><br>
+							<li>Billing hosts all billing scenarios from general enquiries, payments to
+								cancellation/downgrade requests & transfer to other departments</li><br>
 							<li>Upgrade hosts all upgrade scenarios & products that we can upgrade</li><br>
-							<li>Home move/Enginner hosts all scenarios relating engineer visits, home move scenarios</li><br>
+							<li>Home move/Enginner hosts all scenarios relating engineer visits, home move scenarios
+							</li><br>
 							<li>The refresh page button will reload the page & erase everything you've selected</li><br>
 						</ul>
 
@@ -2404,9 +2952,15 @@
 	</section>
 
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 	<script src="assets/js/script.js"></script>
 </BODY>
 

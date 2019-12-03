@@ -1,9 +1,21 @@
 body {
-  background-size: cover;
-  max-height: none;
-  overflow: auto;
+  background-color: #f5f5f5;
+  font-size: 1.125em;
+  line-height: 1.444444444;
+  font-family: Sky Text,Helvetica,Arial,sans-serif;
+  color: #4a4a4a;
+  overflow-y: scroll;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  margin: 0;  
+  padding: 0;
   text-align: center;
 }
+
 
 article {
   height: 100vh;
@@ -25,8 +37,15 @@ article {
 
 
 nav {
-  background-image: linear-gradient( to right, #f7921c, #f15d22, #ed1a27, #ed027c, #b52a86, #6d2f7e, #0b4ea0) !important;
-
+  background: linear-gradient(90deg, #0644a1, #862e81);
+    background-image: linear-gradient(90deg, rgb(6, 68, 161), rgb(134, 46, 129));
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
 }
 
 .navbar-light .navbar-brand {
@@ -38,27 +57,6 @@ scroll,
   margin-top: 20px;
 }
 
-
-.panel.minheight {
-  min-height: 33em;
-}
-
-.panel {
-  background-color: #eaeaea;
-  border: none;
-  box-shadow: 0 1px 2px rgba(43, 59, 93, 0.18);
-  padding: 1.75em 2.25rem;
-  border-radius: 4px;
-  padding: 5px;
-  margin: auto;
-  width: auto;
-  display: inline-block;
-}
-
-.panel li {
-  padding: 0.4em 0;
-  color: #777777 !important;
-}
 
 
 textarea {
@@ -79,7 +77,6 @@ textarea {
 .sliderWrapper {
   display: inline-block;
   margin: 0px 20px 10px 0px;
-  postion: relative;
 }
 
 .sliderWrapper div {
@@ -149,7 +146,8 @@ input:checked+.slider:before {
   background-color: #007bff;
   border-color: #007bff;
   display: -webkit-box;
-  margin: auto;
+  margin-bottom: 20px;
+  margin-right: 5px;
 }
 
 #skyQ1,
@@ -187,69 +185,42 @@ input:checked+.slider:before {
 
 .active,
 .btn {
-  background-color: #ed1245;
-  color: white;
+    color: #0073c5;
+    background-color: transparent;
+    border-color: #0073c5;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
+
 
 .active,
 .btn:hover {
-  background-color: #700b23;
-  color: white;
+  background-color: #0073c5;
+  background-color: #0073c5;
+    border-color: #0073c5;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
 
+
 #generatebtn {
-  color: white;
-  background-color: #49b32c;
-  border-color: #49b32c;
-  display: -webkit-box;
-  margin: auto;
-  font-weight: 400;
+  color: #0073c5;
+    background-color: transparent;
+    border-color: #0073c5;
+    display: inline-block;
 }
 
 #generatebtn:hover {
-  background-color: #1e5110;
-  color: white;
+  background-color: #0073c5;
+  background-color: #0073c5;
+    border-color: #0073c5;
+    color: white;
 }
+
 
 /*product buttons*/
 
-#prdctbtnQ,
-#prdctbtnHD,
-#prdctbtnBB,
-#prdctbtnFTTH,
-#prdctbtnTalk,
-#prdctbtnBill,
-#prdctbtnUpgrd,
-#prdctbtnHmmove {
-  display: inline-block;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #ed1245;
-  border: 1px;
-  border-color: #ed1245;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-#prdctbtnQ:hover,
-#prdctbtnHD:hover,
-#prdctbtnBB:hover,
-#prdctbtnFTTH:hover,
-#prdctbtnTalk:hover,
-#prdctbtnBill:hover,
-#prdctbtnUpgrd:hover {
-  background-color: #700b23;
-  color: white;
-}
 
 /*Uncheck all button for checkbox*/
 
@@ -282,28 +253,20 @@ input:checked+.slider:before {
 /*modal*/
 
 #clear {
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #c93333;
-  border: 1px;
-  border-color: #c93333;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-
+  
+  color: #0073c5;
+  background-color: transparent;
+  border-color: #0073c5;
+  display: inline-block;
 }
 
 #clear:hover {
-  background-color: #7e0303;
-  color: white;
+  background-color: #0073c5;
+  background-color: #0073c5;
+    border-color: #0073c5;
+    color: white;
+    margin-bottom: 20px;
+    margin-right: 5px;
 
 }
 
